@@ -1,0 +1,248 @@
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #000;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 375px;
+    width: 100%;
+}
+
+.nav,
+.logo,
+.header_email,
+.header_search {
+    display: none;
+}
+
+.gamburger {
+    border-bottom: 2px solid #000;
+    width: 20px;
+    display: block;
+    height: 7px;
+}
+
+.header {
+    border: 1px solid silver;
+}
+
+.header_inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 20px;
+}
+
+.logo_mobile {
+    font-size: 25px;
+}
+
+.header_bag {
+    padding: 0 0 0 150px;
+    color: #000;
+    text-decoration: none;
+}
+
+.main {
+    height: 500px;
+}
+
+.footer_info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 20px;
+    border-bottom: 1px solid silver;
+    border-top: 1px solid silver;
+}
+
+.footer_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_text {
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.navbar {
+    list-style-type: none;
+}
+
+.vl {
+    border-left: 1px solid silver;
+}
+
+.footer_right {
+    padding-right: 25px;
+}
+
+.footer_link {
+    text-decoration: none;
+    color: #000;
+    line-height: 30px;
+}
+
+.footer_adress {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    line-height: 25px;
+    border-bottom: 1px solid silver;
+}
+
+.footer_contact {
+    padding: 20px 20px;
+    width: 50%;
+}
+
+.footer_questions {
+    padding: 20px 20px 30px 20px;
+    width: 50%;
+}
+
+.footer_bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 20px;
+}
+
+.footer_template {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 13px;
+}
+
+.footer_share {
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.share_num {
+    background-color: lightgray;
+    margin-left: 10px;
+}
+
+.footer_legal {
+    font-size: 13px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.bottom {
+    padding: 0 15px 15px 0;
+}
+
+.footer_template {
+    padding-top: 20px;
+    border-top: 1px solid silver;
+}
+
+@media screen and (min-width: 376px) {
+    .container {
+        max-width: 768px;
+        width: 100%;
+    }
+    .nav,
+    .logo,
+    .header_email {
+        display: block;
+    }
+    .logo_mobile {
+        display: none;
+    }
+    .header_gamburger {
+        display: none;
+    }
+    .header_bag {
+        padding-left: 50px;
+    }
+    .header_right {
+        display: flex;
+    }
+    .header_main {
+        padding: 0 20px 20px 20px;
+    }
+    .header_nav {
+        text-decoration: none;
+        color: #000;
+        padding-right: 20px;
+    }
+    .header_logo {
+        font-size: 20px;
+    }
+    .header_email {
+        text-decoration: none;
+        color: #000;
+    }
+    .footer_container {
+        flex-direction: row;
+    }
+    .footer_adress {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 50%;
+        border-top: 1px solid silver;
+    }
+    .footer_info {
+        width: 50%;
+    }
+    .footer_bottom {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    .footer_template {
+        border: none;
+    }
+    .footer_share {
+        margin-left: 100px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .container {
+        max-width: 1024px;
+        width: 100%;
+    }
+    .header_main {
+        display: flex;
+        justify-content: space-between;
+    }
+    .header_logo {
+        font-size: 25px;
+    }
+    .header_nav {
+        padding-right: 30px;
+    }
+    .header_search {
+        display: block;
+    }
+    .search_field {
+        border: none;
+        border-bottom: 2px solid silver;
+        outline: none;
+        padding-bottom: 10px;
+    }
+    .footer_adress {
+        flex-direction: row;
+        border-left: 1px solid silver;
+        align-items: flex-start;
+        line-height: 40px;
+    }
+    .footer_right {
+        padding-right: 80px;
+    }
+}
