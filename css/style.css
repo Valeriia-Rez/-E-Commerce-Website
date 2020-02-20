@@ -46,24 +46,19 @@ body {
 
 .header {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-items: stretch;
     height: 70px;
 }
 
 .header_logo {
-    padding: 20px;
+    padding: 5%;
+    flex-grow: 1;
 }
 
 .logo_mobile {
     font-size: 24px;
     font-weight: bold;
     font-family: var(--font-primary);
-}
-
-.header_right {
-    display: flex;
 }
 
 .header_shopArea {
@@ -82,7 +77,7 @@ body {
 }
 
 .header_menu {
-    padding: 20px;
+    padding: 5%;
 }
 
 .gamburger {
@@ -163,8 +158,19 @@ body {
 }
 
 .footer_bottom {
-    display: flex;
     flex-direction: column;
+}
+
+.footer_copy {
+    width: 70%;
+    float: left;
+    padding: 5%;
+}
+
+.footer_share {
+    float: left;
+    width: 30%;
+    padding: 5%;
 }
 
 .footer_lala {
@@ -177,6 +183,9 @@ body {
     font-weight: bold;
     padding: 5%;
     font-family: var(--font-secondary);
+    width: 100%;
+    float: left;
+    border-bottom: 1px solid silver;
 }
 
 .bottom {
@@ -195,12 +204,6 @@ body {
     font-weight: bold;
     border-top: 1px solid silver;
     padding: 5%;
-}
-
-.footer_share {
-    font-weight: bold;
-    font-size: 14px;
-    font-family: var(--font-primary);
 }
 
 .share_icon {
@@ -228,11 +231,8 @@ body {
     .search_field {
         display: none;
     }
-    .header_wrapper {
-        padding: 30px 35px 25px 35px;
-    }
     .header {
-        padding-bottom: 15px;
+        align-items: center;
     }
     .header_bag {
         padding-left: 50px;
@@ -242,6 +242,8 @@ body {
         display: flex;
         font-size: 12px;
         font-family: var(--font-secondary);
+        border: none;
+        padding: 5%;
     }
     .nav {
         font-weight: bold;
@@ -250,6 +252,7 @@ body {
     .header_navbar {
         display: flex;
         justify-content: space-between;
+        padding: 2% 5%;
     }
     .header_nav {
         text-decoration: none;
@@ -276,42 +279,63 @@ body {
     }
     .footer_adress {
         flex-direction: column;
-        align-items: center;
         width: 50%;
+        padding-left: 5%;
     }
     .footer_questions,
     .footer_contact {
         padding: 0;
+    }
+    .footer_questions {
+        border: none;
     }
     .footer_contact {
         padding-top: 20px;
     }
     .site_map {
         flex-direction: row;
-        padding: 50px 30px 80px 35px;
+        align-items: baseline;
         border-bottom: 1px solid silver;
     }
     .footer_icon {
         position: absolute;
-        bottom: 205px;
-        right: 240px;
+        bottom: 40%;
+        right: 30%;
     }
     .footer_info {
-        width: 50%;
+        width: 70%;
+        border: none;
+    }
+    .policy_and_copyRights {
+        width: 40%;
+        float: left;
+        padding: 0 5%;
+        border: none;
+    }
+    .footer_copy {
+        width: 70%;
+        float: left;
+        padding: 5%;
+    }
+    .footer_share {
+        width: 30%;
+        float: left;
+        padding: 5%;
     }
     .footer_bottom {
+        display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
-        align-items: baseline;
+        align-items: center;
     }
     .footer_template {
         border: none;
     }
-    .footer_share {
-        margin-left: 100px;
-    }
     .share_num {
         bottom: 51px;
+    }
+    .footer_end {
+        width: 50%;
     }
 }
 
@@ -372,9 +396,6 @@ body {
     }
     .footer_right {
         padding-right: 80px;
-    }
-    .footer_share {
-        margin-left: 158px;
     }
     .footer_text {
         padding-bottom: 0px;
