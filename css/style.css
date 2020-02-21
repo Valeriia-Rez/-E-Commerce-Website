@@ -17,6 +17,16 @@ body {
     font-size: 12px;
 }
 
+hr {
+    position: absolute;
+    top: 33%;
+    right: 36%;
+    border: 0.5px solid #f8a1a9;
+    width: 23%;
+    height: 0;
+    transform: rotate(-30deg);
+}
+
 .d-flex {
     display: flex;
 }
@@ -33,23 +43,14 @@ body {
     justify-content: space-between;
 }
 
-hr {
-    position: absolute;
-    top: 33%;
-    right: 36%;
-    border: 0.5px solid #f8a1a9;
-    width: 23%;
-    height: 0;
-    transform: rotate(-30deg);
-}
-
 .header_navbar,
 .logo,
 .header_email,
 .text,
 .cats,
 .turtle,
-.hidden {
+.hidden,
+.hiddenTwo {
     display: none;
 }
 
@@ -117,28 +118,37 @@ hr {
     font-weight: bold;
 }
 
-.photo_best,
-.photo {
+.nike {
+    width: 50%;
+}
+
+.cats {
+    width: 50%;
+    height: auto;
+}
+
+.photo_product,
+.photo_arrivals {
     display: flex;
     justify-content: space-around;
 }
 
-.best_offer {
+.offer_block {
     border-bottom: 1px solid silver;
 }
 
-.best_text {
-    padding: 15% 8%;
+.offer_text {
+    padding: 8% 7%;
 }
 
 .heading {
     font-size: 26px;
     font-weight: bold;
     text-align: center;
-    padding-bottom: 5%;
+    padding-bottom: 2%;
 }
 
-.offer {
+.offer_info {
     font-size: 14px;
     font-family: 'Times New Roman', Times, serif;
     line-height: 30px;
@@ -169,7 +179,7 @@ hr {
 .plus {
     font-weight: bold;
     font-size: 26px;
-    padding-top: 25%;
+    padding-top: 18%;
 }
 
 .psevdo {
@@ -194,7 +204,7 @@ hr {
     padding-bottom: 10%;
 }
 
-.photo_heading {
+.photo_name {
     font-weight: bold;
     padding-top: 10%;
 }
@@ -222,8 +232,7 @@ hr {
 }
 
 .button {
-    padding: 5% 22%;
-    margin-left: 5%;
+    padding: 11% 23%;
     background-color: transparent;
     border: none;
     border: 1px solid silver;
@@ -234,11 +243,12 @@ hr {
 }
 
 .add_bag {
-    padding: 10% 18% 25% 20%;
+    padding: 10% 18%;
+    text-align: center;
 }
 
-.heading_bottom {
-    padding-top: 10%;
+.heading_arrivals {
+    padding: 10% 0 5% 0;
 }
 
 
@@ -360,7 +370,7 @@ hr {
     }
     hr {
         width: 50%;
-        top: 27%;
+        top: 22%;
     }
     .header_navbar,
     .logo,
@@ -388,7 +398,7 @@ hr {
         font-size: 12px;
         font-family: var(--font-secondary);
         border: none;
-        padding: 5%;
+        padding: 4%;
     }
     .header_email {
         text-decoration: none;
@@ -429,38 +439,42 @@ hr {
     }
     .banner_sale {
         position: absolute;
-        top: 30%;
-        right: 15%;
+        top: 22%;
+        right: 13%;
         font-size: 16px;
         font-family: 'Times New Roman', Times, serif;
     }
-    .discount {
-        padding: 8% 7% 0 0;
+    .button {
+        padding: 5% 23%;
     }
-    .plus {
-        padding-top: 17%;
+    .discount {
+        padding: 6% 7% 0 0;
     }
     .banner_img {
         height: 100%;
+        width: 100%;
     }
     .heading {
         font-size: 40px;
         font-weight: bold;
         font-family: var(--font-primary);
     }
-    .offer {
+    .offer_info {
         font-size: 16px;
     }
-    .main {
+    .offer_product {
         display: flex;
         justify-content: space-around;
     }
-    .photo_best {
+    .photo_product {
         width: 70%;
     }
     .turtle {
         width: 78%;
-        height: 72%;
+        height: 75%;
+    }
+    .photo_arrivals {
+        padding-left: 5%;
     }
     .footer_info {
         width: 70%;
@@ -526,7 +540,8 @@ hr {
     .container {
         max-width: 1180px;
     }
-    .text {
+    .text,
+    .hiddenTwo {
         display: block;
     }
     .header_wrapper {
@@ -546,6 +561,18 @@ hr {
         position: absolute;
         bottom: 23%;
         right: 5%;
+    }
+    .banner_img {
+        width: 100%;
+    }
+    .banner_text {
+        font-size: 28px;
+    }
+    .photo_product {
+        width: 50%;
+    }
+    .heading {
+        font-size: 50px;
     }
     .footer_info {
         width: 50%;
