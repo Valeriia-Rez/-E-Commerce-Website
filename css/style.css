@@ -347,9 +347,8 @@ body {
     }
     .footer_adress {
         flex-direction: row;
-        justify-content: space-around;
         align-items: baseline;
-        padding-left: 0;
+        flex-wrap: wrap;
     }
     .footer_contact {
         width: 45%;
@@ -364,5 +363,21 @@ body {
     }
     .policy_and_copyRights {
         width: 33%;
+    }
+    .left {
+        display: flex;
+        flex-direction: column;
+    }
+    .text {
+        width: 57%;
+        padding: 10% 0;
+        font-size: 16px;
+        font-family: 'Times New Roman', Times, serif;
+        color: #e0e0e0;
+        line-height: 30px;
+    }
+    .footer_icon {
+        right: 41%;
+        bottom: 35%;
     }
 }
