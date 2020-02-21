@@ -33,10 +33,23 @@ body {
     justify-content: space-between;
 }
 
+hr {
+    position: absolute;
+    top: 33%;
+    right: 36%;
+    border: 0.5px solid #f8a1a9;
+    width: 23%;
+    height: 0;
+    transform: rotate(-30deg);
+}
+
 .header_navbar,
 .logo,
 .header_email,
-.text {
+.text,
+.cats,
+.turtle,
+.hidden {
     display: none;
 }
 
@@ -104,9 +117,10 @@ body {
     font-weight: bold;
 }
 
+.photo_best,
 .photo {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .best_offer {
@@ -158,6 +172,21 @@ body {
     padding-top: 25%;
 }
 
+.psevdo {
+    position: relative;
+}
+
+.psevdo:before {
+    content: "NEW";
+    background-color: #f14a58;
+    color: #fff;
+    font-size: 12px;
+    font-family: var(--font-secondary);
+    position: absolute;
+    top: 5%;
+    padding: 4% 9%;
+}
+
 .photo_text {
     text-align: center;
     line-height: 24px;
@@ -174,6 +203,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
     padding: 5% 13%;
     line-height: 40px;
 }
@@ -192,7 +222,8 @@ body {
 }
 
 .button {
-    padding: 9% 27%;
+    padding: 5% 22%;
+    margin-left: 5%;
     background-color: transparent;
     border: none;
     border: 1px solid silver;
@@ -327,9 +358,16 @@ body {
         max-width: 1023;
         margin: 0 auto;
     }
+    hr {
+        width: 50%;
+        top: 27%;
+    }
     .header_navbar,
     .logo,
-    .header_email {
+    .header_email,
+    .cats,
+    .turtle,
+    .hidden {
         display: block;
     }
     .logo_mobile,
@@ -378,6 +416,51 @@ body {
         flex-direction: row;
         align-items: baseline;
         border-bottom: 1px solid silver;
+    }
+    .banner {
+        display: flex;
+    }
+    .first {
+        left: 32%;
+    }
+    .second {
+        right: 10%;
+        font-family: var(--font-primary);
+    }
+    .banner_sale {
+        position: absolute;
+        top: 30%;
+        right: 15%;
+        font-size: 16px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .discount {
+        padding: 8% 7% 0 0;
+    }
+    .plus {
+        padding-top: 17%;
+    }
+    .banner_img {
+        height: 100%;
+    }
+    .heading {
+        font-size: 40px;
+        font-weight: bold;
+        font-family: var(--font-primary);
+    }
+    .offer {
+        font-size: 16px;
+    }
+    .main {
+        display: flex;
+        justify-content: space-around;
+    }
+    .photo_best {
+        width: 70%;
+    }
+    .turtle {
+        width: 78%;
+        height: 72%;
     }
     .footer_info {
         width: 70%;
