@@ -87,9 +87,132 @@ body {
     height: 7px;
 }
 
-.main {
-    height: 500px;
+
+/*****************************************
+***************************/
+
+.banner {
+    position: relative;
+    border-bottom: 1px solid silver;
 }
+
+.banner_text {
+    position: absolute;
+    top: 12%;
+    right: 20%;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.photo {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.best_offer {
+    border-bottom: 1px solid silver;
+}
+
+.best_text {
+    padding: 15% 8%;
+}
+
+.heading {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+.offer {
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 30px;
+    text-align: center;
+}
+
+.symbol1,
+.symbol2 {
+    position: absolute;
+    bottom: 34%;
+}
+
+.symbol1,
+.symbol4 {
+    right: 22%;
+}
+
+.symbol2,
+.symbol3 {
+    left: 22%;
+}
+
+.symbol3,
+.symbol4 {
+    position: absolute;
+}
+
+.plus {
+    font-weight: bold;
+    font-size: 26px;
+    padding-top: 25%;
+}
+
+.photo_text {
+    text-align: center;
+    line-height: 24px;
+    font-size: 12px;
+    padding-bottom: 10%;
+}
+
+.photo_heading {
+    font-weight: bold;
+    padding-top: 10%;
+}
+
+.discount {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5% 13%;
+    line-height: 40px;
+}
+
+.price {
+    font-size: 18px;
+    font-family: var(--font-secondary);
+    color: #757575;
+    padding-left: 9%;
+}
+
+.disc {
+    font-size: 26px;
+    font-weight: bold;
+    font-family: var(--font-secondary);
+}
+
+.button {
+    padding: 9% 27%;
+    background-color: transparent;
+    border: none;
+    border: 1px solid silver;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: var(--font-primary);
+    outline: none;
+}
+
+.add_bag {
+    padding: 10% 18% 25% 20%;
+}
+
+.heading_bottom {
+    padding-top: 10%;
+}
+
+
+/*********************************
+********************/
 
 .footer {
     display: flex;
@@ -358,16 +481,6 @@ body {
         font-size: 14px;
         font-family: var(--font-secondary);
     }
-    .footer_end {
-        width: 64%;
-    }
-    .policy_and_copyRights {
-        width: 33%;
-    }
-    .left {
-        display: flex;
-        flex-direction: column;
-    }
     .text {
         width: 57%;
         padding: 10% 0;
@@ -375,6 +488,12 @@ body {
         font-family: 'Times New Roman', Times, serif;
         color: #e0e0e0;
         line-height: 30px;
+    }
+    .policy_and_copyRights {
+        width: 33%;
+    }
+    .footer_end {
+        width: 64%;
     }
     .footer_icon {
         right: 41%;
