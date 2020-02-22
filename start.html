@@ -11,23 +11,24 @@
 <body>
     <div class="container">
         <header class="header_wrapper">
-            <div class="header">
-                <div class="header_logo">
-                    <h3 class="logo">Template</h3>
-                    <h3 class="logo_mobile">TL</h3>
+            <div class="header d-flex justify-between">
+                <div class="header_logo d-flex">
+                    <h3 class="logo d-none d-block-tablet-up">Template</h3>
+                    <h3 class="logo d-none-tablet-up">TL</h3>
                 </div>
                 <div class="header_shopArea d-flex align-items-center">
-                    <a href="#" class="header_email">E-mail sing up</a>
+                    <a href="#" class="header_email d-none d-block-tablet-up">E-mail sing up</a>
                     <a href="#" class="header_bag"><img src="img/ico_bag.jpg" alt="bag" class="header_icon">Bag (0)</a>
                 </div>
-                <div class="header_menu">
+                <div class="vertical_divider d-none-tablet-up"></div>
+                <div class="header_menu d-none-tablet-up">
                     <span class="gamburger"></span>
                     <span class="gamburger"></span>
                     <span class="gamburger"></span>
                 </div>
             </div>
-            <div class="header_navbar">
-                <nav class="nav">
+            <div class="header_navbar d-none d-flex-tablet-up justify-between">
+                <nav class="nav_main ">
                     <a href="#" class="header_nav">Women</a>
                     <a href="#" class="header_nav">Men</a>
                     <a href="#" class="header_nav">Handbags</a>
@@ -37,115 +38,128 @@
                     <a href="#" class="header_nav">Clearance</a>
                     <a href="#" class="header_nav">Store Locator</a>
                 </nav>
+
                 <div class="header_search">
                     <form>
-                        <input type="search" class="search_field" placeholder="Style Name">
+                        <input type="search" class="search_field d-none" placeholder="Style Name">
                         <img src="img/ico.jpg" alt="lupa" class="search_icon">
                     </form>
                 </div>
             </div>
         </header>
+    </div>
 
 
-
-        <div class="banner">
-            <div class="nike">
-                <span class="banner_text first">Nike Red</span>
-                <img src="img/photo.jpg" alt="nike" class="banner_img">
+    <div class="banner">
+        <hr class="dividerLine">
+        <div class="promo_banners">
+            <div class="promo_banner">
+                <span class="banner_text">Nike Red</span>
+                <img src="img/photo.jpg" alt="nike_trainers" class="banner_img">
             </div>
-            <div class="cats">
-                <span class="banner_text second">Caps & Hats</span>
-                <span class="banner_sale"><i>Sale -50%</i></span>
-                <img src="img/fon1.jpg" alt="cats" class="banner_img">
+            <div class="promo_banner d-none d-block-tablet-up">
+                <div class="banner_text text-center">
+                    <span>Caps & Hats</span>
+                    <br>
+                    <span class="banner_sale"><i>Sale -50%</i></span>
+                </div>
+                <img src="img/fon1.jpg" alt="cats&hats" class="banner_img">
             </div>
         </div>
+        <hr class="dividerLine">
+    </div>
 
-
-        <div class="offer_block">
-            <div class="offer_text">
-                <h1 class="heading">Best offer</h1>
+    <main class="container">
+        <section class="offer_block">
+            <div class="offer_text text-center">
+                <a href="#" class="heading">Best offer</a>
                 <p class="offer_info"><i>This offer is valid in-store and online. Prices displayed reflect this additional discount. This offer ends at 11:59 GMT on March 1st 2019</i></p>
             </div>
-            <div class="offer_product">
-                <div class="photo_product">
-                    <div class="best psevdo">
-                        <img src="img/symbol.jpg" alt="symbol" class="symbol1">
+            <div class="offer_product d-flex flex-direction-column direction-row-tablet-up justify-between">
+                <div class="product_items d-flex justify-around">
+                    <div class="product_item new_product">
+                        <span class="new_label">New</span>
                         <img src="img/photo2.jpg" alt="Jeans">
-                        <div class="photo_text">
-                            <p class="photo_name">Only Skinny Jeans</p>
+                        <div class="photo_text d-flex flex-direction-column text-center">
+                            <a href="#" class="photo_link">Only Skinny Jeans</a>
                             <span>£66.50</span>
                         </div>
-                        <img src="img/symbol2.jpg" alt="symbol" class="symbol3">
+
                     </div>
                     <span class="plus">+</span>
-                    <div class="best">
-                        <img src="img/symbol.jpg" alt="symbol" class="symbol2">
+                    <div class="product_item">
+
                         <img src="img/photo3.jpg" alt="Jeans">
-                        <div class="photo_text">
-                            <p class="photo_name">Levi's Jeans for women</p>
+                        <div class="photo_text d-flex flex-direction-column text-center">
+                            <a href="#" class="photo_link">Levi's Jeans for women</a>
                             <span>£95.50</span>
                         </div>
-                        <img src="img/symbol2.jpg" alt="symbol" class="symbol4">
                     </div>
                 </div>
-                <div class="discount">
+                <div class="discount d-flex align-items-center flex-direction-column">
                     <div class="price">
                         <span>£161.00</span>
                     </div>
-                    <hr>
+                    <hr class="crossItem">
                     <div class="disc">
                         <span>= £146.00</span>
                     </div>
                 </div>
             </div>
-            <div class="add_bag">
+            <div class="add_bag text-center">
                 <button class="button" type="submit">Add to bag</button>
             </div>
-        </div>
+        </section>
+
+
 
         <div class="newArrivals_block">
-            <h1 class="heading heading_arrivals">New arrivals</h1>
-            <div class="photo_arrivals">
-                <div class="best psevdo">
+            <div class="offer_text text-center">
+                <a href="#" class="heading">New arrivals</a>
+            </div>
+            <div class="photo_arrivals d-flex justify-around">
+                <div class="product_item new_product">
+                    <span class="new_label">New</span>
                     <img src="img/photo2.jpg" alt="Jeans">
-                    <div class="photo_text">
-                        <p class="photo_heading">Only Skinny Jeans</p>
+                    <div class="photo_text d-flex flex-direction-column text-center">
+                        <a href="#" class="photo_link">Only Skinny Jeans</a>
                         <span>£66.50</span>
                     </div>
                 </div>
-                <div class="best psevdo">
+                <div class="product_item new_product">
+                    <span class="new_label">New</span>
                     <img src="img/photo5.jpg" alt="Jumper">
-                    <div class="photo_text">
-                        <p class="photo_heading">Neck Knitted Jumper</p>
+                    <div class="photo_text d-flex flex-direction-column text-center">
+                        <a href="#" class="photo_link">Neck Knitted Jumper</a>
                         <span>£76.25</span>
                     </div>
                 </div>
-                <div class="best hidden">
+                <div class="product_item d-none d-block-tablet-up">
                     <img src="img/photo6.jpg" alt="photo3" class="turtle">
-                    <div class="photo_text">
-                        <p class="photo_heading">Turtle Neck Jumper in RiB</p>
+                    <div class="photo_text d-flex flex-direction-column text-center">
+                        <a href="#" class="photo_link">Turtle Neck Jumper in RiB</a>
                         <span>£130.25</span>
                     </div>
                 </div>
-                <div class="best hiddenTwo">
+                <div class="product_item d-none d-block-desktop-up">
                     <img src="img/photo_6.jpg" alt="photo3" class="turtle">
-                    <div class="photo_text">
-                        <p class="photo_heading">Turtle Neck Jumper in RiB</p>
+                    <div class="photo_text d-flex flex-direction-column text-center">
+                        <a href="#" class="photo_link">Turtle Neck Jumper in RiB</a>
                         <span>£130.25</span>
                     </div>
                 </div>
             </div>
 
-            <div class="add_bag">
+            <div class="add_bag text-center">
                 <button class="button" type="submit">All arrivals</button>
             </div>
 
         </div>
 
 
-        <footer class="footer">
-            <div class="site_map d-flex">
-                <div class="footer_info">
+        <footer class="footer d-flex flex-direction-column">
+            <div class="site_map d-flex flex-direction-column">
+                <div class="footer_info d-flex justify-between">
                     <div class="footer_left">
                         <h4 class="footer_text">Quick Links</h4>
                         <ul class="footer_nav">
@@ -171,7 +185,7 @@
                     </div>
                 </div>
 
-                <div class="footer_adress">
+                <div class="footer_adress d-flex justify-between">
                     <div class="footer_questions">
                         <h3 class="footer_text">Questions</h3>
                         <img src="img/twi_ico.jpg" class="footer_img">
@@ -181,7 +195,7 @@
                         <h3 class="footer_text">Order by fhone</h3>
                         <span>8-800-409-47-12</span>
                     </div>
-                    <div class="text">
+                    <div class="text d-none">
                         <p><i>We have our own delivery service which operates in 23 major European cities. Delivery time - 3-5 days. </i></p>
                     </div>
                 </div>
@@ -207,7 +221,7 @@
                 <img src="img/twi.jpg" alt="twitter" class="twitter">
             </div>
         </footer>
-    </div>
+        </div>
 </body>
 
 </html>

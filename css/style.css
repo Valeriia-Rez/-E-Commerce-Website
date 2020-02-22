@@ -17,16 +17,6 @@ body {
     font-size: 12px;
 }
 
-hr {
-    position: absolute;
-    top: 33%;
-    right: 36%;
-    border: 0.5px solid #f8a1a9;
-    width: 23%;
-    height: 0;
-    transform: rotate(-30deg);
-}
-
 .d-flex {
     display: flex;
 }
@@ -43,40 +33,47 @@ hr {
     justify-content: space-between;
 }
 
-.header_navbar,
-.logo,
-.header_email,
-.text,
-.cats,
-.turtle,
-.hidden,
-.hiddenTwo {
+.justify-around {
+    justify-content: space-around;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.d-none {
     display: none;
 }
 
-.header_wrapper {
-    border-bottom: 1px solid silver;
+.crossItem {
+    position: absolute;
+    top: 33%;
+    right: 36%;
+    border: 0.5px solid #f8a1a9;
+    width: 23%;
+    height: 0;
+    transform: rotate(-30deg);
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
+    align-items: stretch;
     height: 70px;
 }
 
 .header_logo {
-    padding: 5%;
     flex-grow: 1;
+    padding: 5%;
 }
 
-.logo_mobile {
+.vertical_divider {
+    border-right: 1px solid #e5e5e5;
+}
+
+.logo {
+    align-self: center;
     font-size: 24px;
     font-weight: bold;
     font-family: var(--font-primary);
-}
-
-.header_shopArea {
-    border-right: 1px solid silver;
 }
 
 .header_bag {
@@ -91,7 +88,8 @@ hr {
 }
 
 .header_menu {
-    padding: 6%;
+    align-self: center;
+    padding: 5%;
 }
 
 .gamburger {
@@ -106,8 +104,13 @@ hr {
 ***************************/
 
 .banner {
-    position: relative;
-    border-bottom: 1px solid silver;
+    height: 240px;
+}
+
+.dividerLine {
+    border: 0;
+    height: 1px;
+    background: #e5e5e5;
 }
 
 .banner_text {
@@ -118,23 +121,27 @@ hr {
     font-weight: bold;
 }
 
-.nike {
-    width: 50%;
+.promo_banners {
+    overflow: hidden;
+    height: 100%;
 }
 
-.cats {
-    width: 50%;
-    height: auto;
+.promo_banner {
+    position: relative;
+    height: 100%;
 }
 
-.photo_product,
-.photo_arrivals {
-    display: flex;
-    justify-content: space-around;
+.promo_banner:nth-of-type(2) {
+    border-left: 1px solid #e5e5e5;
+}
+
+.banner_img {
+    width: 100%;
+    height: 100%;
 }
 
 .offer_block {
-    border-bottom: 1px solid silver;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .offer_text {
@@ -142,9 +149,10 @@ hr {
 }
 
 .heading {
+    text-decoration: none;
+    color: var(--main-color);
     font-size: 26px;
     font-weight: bold;
-    text-align: center;
     padding-bottom: 2%;
 }
 
@@ -152,28 +160,6 @@ hr {
     font-size: 14px;
     font-family: 'Times New Roman', Times, serif;
     line-height: 30px;
-    text-align: center;
-}
-
-.symbol1,
-.symbol2 {
-    position: absolute;
-    bottom: 34%;
-}
-
-.symbol1,
-.symbol4 {
-    right: 22%;
-}
-
-.symbol2,
-.symbol3 {
-    left: 22%;
-}
-
-.symbol3,
-.symbol4 {
-    position: absolute;
 }
 
 .plus {
@@ -182,37 +168,55 @@ hr {
     padding-top: 18%;
 }
 
-.psevdo {
+.new_product {
     position: relative;
 }
 
-.psevdo:before {
-    content: "NEW";
+.new_label {
     background-color: #f14a58;
     color: #fff;
     font-size: 12px;
+    font-weight: bold;
     font-family: var(--font-secondary);
     position: absolute;
     top: 5%;
     padding: 4% 9%;
+    text-transform: uppercase;
+}
+
+.product_items {
+    position: relative;
+}
+
+.new_product:after {
+    content: "^";
+    position: absolute;
+    color: #f14a58;
+    font-size: 30px;
+    top: -12%;
+    right: 47%;
+    font-weight: bold;
 }
 
 .photo_text {
-    text-align: center;
     line-height: 24px;
     font-size: 12px;
     padding-bottom: 10%;
 }
 
-.photo_name {
+.photo_link {
+    text-decoration: none;
     font-weight: bold;
     padding-top: 10%;
+    color: var(--main-color);
+}
+
+.photo_link:hover,
+.photo_link:active {
+    color: #f14a58;
 }
 
 .discount {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     position: relative;
     padding: 5% 13%;
     line-height: 40px;
@@ -235,11 +239,17 @@ hr {
     padding: 11% 23%;
     background-color: transparent;
     border: none;
-    border: 1px solid silver;
+    border: 1px solid #e5e5e5;
     font-size: 20px;
     font-weight: bold;
     font-family: var(--font-primary);
     outline: none;
+}
+
+.button:hover,
+.button:active {
+    color: #f14a58;
+    border: 1px solid #f14a58;
 }
 
 .add_bag {
@@ -256,22 +266,17 @@ hr {
 ********************/
 
 .footer {
-    display: flex;
-    flex-direction: column;
-    border-top: 1px solid silver;
+    border-top: 1px solid #e5e5e5;
     position: relative;
 }
 
 .site_map {
-    flex-direction: column;
-    border-bottom: 1px solid silver;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .footer_info {
-    display: flex;
-    justify-content: space-between;
     padding: 8% 10% 8% 5%;
-    border-bottom: 1px solid silver;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .footer_text {
@@ -293,14 +298,12 @@ hr {
 }
 
 .footer_adress {
-    display: flex;
     line-height: 25px;
-    justify-content: space-between;
 }
 
 .footer_questions {
     padding: 5% 10% 10% 5%;
-    border-right: 1px solid silver;
+    border-right: 1px solid #e5e5e5;
 }
 
 .footer_contact {
@@ -311,10 +314,6 @@ hr {
     font-family: var(--font-primary);
 }
 
-.footer_bottom {
-    flex-direction: column;
-}
-
 .policy_and_copyRights {
     font-size: 10px;
     font-weight: bold;
@@ -322,7 +321,7 @@ hr {
     font-family: var(--font-secondary);
     width: 100%;
     float: left;
-    border-bottom: 1px solid silver;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .bottom {
@@ -345,18 +344,18 @@ hr {
 }
 
 .share {
-    margin-left: 17%;
+    margin-left: 9%;
 }
 
 .share_num {
     background-color: #f4f4f4;
-    padding: 1% 3%;
+    padding: 1% 7%;
 }
 
 .footer_icon {
     position: absolute;
     bottom: 13%;
-    right: 5%;
+    right: 7%;
 }
 
 .twitter {
@@ -368,25 +367,21 @@ hr {
         max-width: 1023;
         margin: 0 auto;
     }
-    hr {
+    .crossItem {
         width: 50%;
         top: 22%;
     }
-    .header_navbar,
-    .logo,
-    .header_email,
-    .cats,
-    .turtle,
-    .hidden {
-        display: block;
-    }
-    .logo_mobile,
-    .header_menu,
-    .search_field {
+    .d-none-tablet-up {
         display: none;
     }
-    .header {
-        align-items: center;
+    .d-block-tablet-up {
+        display: block;
+    }
+    .d-flex-tablet-up {
+        display: flex;
+    }
+    .direction-row-tablet-up {
+        flex-direction: row;
     }
     .header_logo {
         font-size: 26px;
@@ -394,7 +389,6 @@ hr {
         font-family: var(--font-primary);
     }
     .header_shopArea {
-        display: flex;
         font-size: 12px;
         font-family: var(--font-secondary);
         border: none;
@@ -406,14 +400,13 @@ hr {
     }
     .header_bag {
         padding-left: 50px;
-        margin-right: 0px;
+        margin-right: 10px;
     }
     .header_navbar {
-        display: flex;
         justify-content: space-between;
         padding: 2% 5%;
     }
-    .nav {
+    .nav_main {
         font-weight: bold;
         font-family: var(--font-primary);
     }
@@ -422,37 +415,30 @@ hr {
         color: var(--main-color);
         padding-right: 25px;
     }
+    .header_nav:hover,
+    .header_nav:active {
+        color: #f14a58;
+    }
     .site_map {
         flex-direction: row;
         align-items: baseline;
-        border-bottom: 1px solid silver;
+        border-bottom: 1px solid #e5e5e5;
     }
-    .banner {
-        display: flex;
-    }
-    .first {
-        left: 32%;
-    }
-    .second {
-        right: 10%;
-        font-family: var(--font-primary);
+    .promo_banner {
+        width: 50%;
+        float: left;
     }
     .banner_sale {
-        position: absolute;
-        top: 22%;
-        right: 13%;
+        color: #a7a7a7;
         font-size: 16px;
         font-family: 'Times New Roman', Times, serif;
+        font-weight: 400;
     }
     .button {
         padding: 5% 23%;
     }
     .discount {
         padding: 6% 7% 0 0;
-    }
-    .banner_img {
-        height: 100%;
-        width: 100%;
     }
     .heading {
         font-size: 40px;
@@ -462,11 +448,7 @@ hr {
     .offer_info {
         font-size: 16px;
     }
-    .offer_product {
-        display: flex;
-        justify-content: space-around;
-    }
-    .photo_product {
+    .product_items {
         width: 70%;
     }
     .turtle {
@@ -540,20 +522,33 @@ hr {
     .container {
         max-width: 1180px;
     }
-    .text,
-    .hiddenTwo {
+    .d-block-desktop-up {
+        display: block;
+    }
+    .banner {
+        max-width: 1300px;
+        height: 380px;
+        margin: 0 auto;
+    }
+    .promo_banners {
+        padding: 0 2%;
+    }
+    .dividerLine {
+        background: -webkit-gradient(linear, 0 0, 100% 0, from(#f8f3f3), to(#f8f3f3), color-stop(80%, #acaaaa));
+    }
+    .text {
         display: block;
     }
     .header_wrapper {
         position: relative;
     }
-    .nav {
+    .nav_main {
         font-size: 13px;
     }
     .search_field {
         display: block;
         border: none;
-        border-bottom: 2px solid silver;
+        border-bottom: 2px solid #e5e5e5;
         outline: none;
         padding-bottom: 5%;
     }
@@ -562,13 +557,10 @@ hr {
         bottom: 23%;
         right: 5%;
     }
-    .banner_img {
-        width: 100%;
-    }
     .banner_text {
         font-size: 28px;
     }
-    .photo_product {
+    .product_items {
         width: 50%;
     }
     .heading {
@@ -576,7 +568,7 @@ hr {
     }
     .footer_info {
         width: 50%;
-        border-right: 1px solid silver;
+        border-right: 1px solid #e5e5e5;
     }
     .footer_adress {
         flex-direction: row;
