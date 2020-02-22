@@ -21,6 +21,10 @@ body {
     display: flex;
 }
 
+.d-block {
+    display: block;
+}
+
 .align-items-center {
     align-items: center;
 }
@@ -37,6 +41,10 @@ body {
     justify-content: space-around;
 }
 
+.justify-center {
+    justify-content: center;
+}
+
 .text-center {
     text-align: center;
 }
@@ -47,22 +55,25 @@ body {
 
 .crossItem {
     position: absolute;
-    top: 33%;
-    right: 36%;
+    top: 50%;
+    right: 7%;
     border: 0.5px solid #f8a1a9;
-    width: 23%;
+    width: 95%;
     height: 0;
     transform: rotate(-30deg);
 }
 
+.header_wrapper {
+    height: 70px;
+}
+
 .header {
     align-items: stretch;
-    height: 70px;
 }
 
 .header_logo {
     flex-grow: 1;
-    padding: 5%;
+    padding: 0 5%;
 }
 
 .vertical_divider {
@@ -89,7 +100,7 @@ body {
 
 .header_menu {
     align-self: center;
-    padding: 5%;
+    padding: 7% 5%;
 }
 
 .gamburger {
@@ -140,39 +151,53 @@ body {
     height: 100%;
 }
 
-.offer_block {
+.products_section {
+    padding-bottom: 100px;
     border-bottom: 1px solid #e5e5e5;
 }
 
-.offer_text {
-    padding: 8% 7%;
+.products_header {
+    padding: 50px 20px 100px;
 }
 
-.heading {
+.products_header_arrivals {
+    padding: 100px 0 70px;
+}
+
+.products_title {
     text-decoration: none;
     color: var(--main-color);
     font-size: 26px;
     font-weight: bold;
-    padding-bottom: 2%;
 }
 
-.offer_info {
+.products_info {
     font-size: 14px;
     font-family: 'Times New Roman', Times, serif;
     line-height: 30px;
+    margin-top: 20px;
+}
+
+.products {
+    position: relative;
+}
+
+.discount_amounts {
+    margin-bottom: 10%;
 }
 
 .plus {
+    position: absolute;
+    top: 29%;
     font-weight: bold;
     font-size: 26px;
-    padding-top: 18%;
 }
 
 .new_product {
     position: relative;
 }
 
-.new_label {
+.new_product_promo {
     background-color: #f14a58;
     color: #fff;
     font-size: 12px;
@@ -188,56 +213,84 @@ body {
     position: relative;
 }
 
-.new_product:after {
+.product_item {
+    position: relative;
+}
+
+.product_item.multi:before {
     content: "^";
+    top: -12%;
+    right: 47%;
+}
+
+.product_item.multi:after {
+    content: "^";
+    transform: rotate(180deg);
+    bottom: -3%;
+    right: 47%;
+}
+
+.product_item.multi:before,
+.product_item.multi:after {
     position: absolute;
     color: #f14a58;
     font-size: 30px;
-    top: -12%;
-    right: 47%;
     font-weight: bold;
 }
 
-.photo_text {
+.product_item img {
+    height: 220px;
+    width: 160px;
+}
+
+.product_info {
     line-height: 24px;
     font-size: 12px;
     padding-bottom: 10%;
 }
 
-.photo_link {
+.product_name {
     text-decoration: none;
     font-weight: bold;
     padding-top: 10%;
     color: var(--main-color);
 }
 
-.photo_link:hover,
-.photo_link:active {
+.product_name:hover,
+.product_name:active {
     color: #f14a58;
 }
 
-.discount {
-    position: relative;
-    padding: 5% 13%;
+.products_discount {
     line-height: 40px;
+    position: relative;
 }
 
-.price {
+.products_discount:before {
+    content: "=";
+    position: absolute;
+    font-size: 26px;
+    font-weight: bold;
+    left: 30%;
+    bottom: 30%;
+}
+
+.price_before_discount {
+    position: relative;
     font-size: 18px;
     font-family: var(--font-secondary);
     color: #757575;
-    padding-left: 9%;
 }
 
-.disc {
+.price_after_discount {
     font-size: 26px;
     font-weight: bold;
     font-family: var(--font-secondary);
 }
 
 .button {
-    padding: 11% 23%;
     background-color: transparent;
+    padding: 25px 60px;
     border: none;
     border: 1px solid #e5e5e5;
     font-size: 20px;
@@ -266,7 +319,6 @@ body {
 ********************/
 
 .footer {
-    border-top: 1px solid #e5e5e5;
     position: relative;
 }
 
@@ -367,10 +419,6 @@ body {
         max-width: 1023;
         margin: 0 auto;
     }
-    .crossItem {
-        width: 50%;
-        top: 22%;
-    }
     .d-none-tablet-up {
         display: none;
     }
@@ -383,6 +431,9 @@ body {
     .direction-row-tablet-up {
         flex-direction: row;
     }
+    .header_wrapper {
+        height: 120px;
+    }
     .header_logo {
         font-size: 26px;
         font-weight: bold;
@@ -392,7 +443,7 @@ body {
         font-size: 12px;
         font-family: var(--font-secondary);
         border: none;
-        padding: 4%;
+        padding: 3%;
     }
     .header_email {
         text-decoration: none;
@@ -404,7 +455,7 @@ body {
     }
     .header_navbar {
         justify-content: space-between;
-        padding: 2% 5%;
+        padding: 0 5% 2%;
     }
     .nav_main {
         font-weight: bold;
@@ -434,29 +485,51 @@ body {
         font-family: 'Times New Roman', Times, serif;
         font-weight: 400;
     }
-    .button {
-        padding: 5% 23%;
-    }
-    .discount {
-        padding: 6% 7% 0 0;
-    }
-    .heading {
-        font-size: 40px;
-        font-weight: bold;
-        font-family: var(--font-primary);
-    }
-    .offer_info {
-        font-size: 16px;
+    .products {
+        margin-bottom: 75px;
+        padding: 0 38px;
     }
     .product_items {
         width: 70%;
     }
+    .products_header {
+        padding: 100px 38px;
+    }
+    .products_header_arrivals {
+        padding-bottom: 80px;
+    }
+    .products_title {
+        font-size: 40px;
+        font-weight: bold;
+        font-family: var(--font-primary);
+    }
+    .product_item img {
+        height: 290px;
+        width: 204px;
+    }
+    .products_info {
+        font-size: 16px;
+    }
+    .products_discount {
+        justify-content: flex-end;
+        width: 30%;
+    }
+    .products_discount:before {
+        left: 17%;
+        top: 27%;
+    }
+    .price_before_discount {
+        margin-right: 32px;
+    }
+    .discount_amounts {
+        margin-top: 30%;
+    }
+    .button {
+        padding: 22px 95px;
+    }
     .turtle {
         width: 78%;
         height: 75%;
-    }
-    .photo_arrivals {
-        padding-left: 5%;
     }
     .footer_info {
         width: 70%;
@@ -554,7 +627,7 @@ body {
     }
     .search_icon {
         position: absolute;
-        bottom: 23%;
+        bottom: 15%;
         right: 5%;
     }
     .banner_text {
@@ -563,8 +636,12 @@ body {
     .product_items {
         width: 50%;
     }
-    .heading {
+    .products_title {
         font-size: 50px;
+    }
+    .product_item img {
+        height: 340px;
+        width: 240px;
     }
     .footer_info {
         width: 50%;
