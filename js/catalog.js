@@ -19,6 +19,3 @@ const closeFiltersHandler = () => {
     }
 
 }
-
-openFiltersBtn.addEventListener("click", openFiltersHandler);
-closeFiltersBtn.addEventListener("click", closeFiltersHandler);

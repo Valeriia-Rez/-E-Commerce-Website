@@ -19,7 +19,7 @@
 body {
     font-family: var(--font-primary);
     color: var(--main-color);
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .d-flex {
@@ -148,10 +148,11 @@ body {
     border-bottom: 1px solid var(--lightGray-color);
     font-size: 13px;
     font-weight: bold;
+    height: 55px;
 }
 
 .filters_heading {
-    padding: 5% 0 5% 5%;
+    padding-left: 5%;
 }
 
 .filters_header_text {
@@ -563,6 +564,11 @@ body {
     .header_nav:hover,
     .header_nav:active {
         color: var(--danger-color);
+    }
+    /*********************************
+    ***********Filters**/
+    .filters_header {
+        height: 65px;
     }
     .site_map {
         flex-direction: row;
