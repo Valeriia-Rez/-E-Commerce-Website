@@ -45,6 +45,10 @@ body {
     justify-content: center;
 }
 
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
 .text-center {
     text-align: center;
 }
@@ -246,7 +250,7 @@ body {
 .product_info {
     line-height: 24px;
     font-size: 12px;
-    padding-bottom: 10%;
+    padding-bottom: 20%;
 }
 
 .product_name {
@@ -291,7 +295,6 @@ body {
 .button {
     background-color: transparent;
     padding: 25px 60px;
-    border: none;
     border: 1px solid #e5e5e5;
     font-size: 20px;
     font-weight: bold;
@@ -527,10 +530,6 @@ body {
     .button {
         padding: 22px 95px;
     }
-    .turtle {
-        width: 78%;
-        height: 75%;
-    }
     .footer_info {
         width: 70%;
         border: none;
@@ -595,6 +594,9 @@ body {
     .container {
         max-width: 1180px;
     }
+    .d-none-desktop-up {
+        display: none;
+    }
     .d-block-desktop-up {
         display: block;
     }
@@ -607,7 +609,7 @@ body {
         padding: 0 2%;
     }
     .dividerLine {
-        background: -webkit-gradient(linear, 0 0, 100% 0, from(#f8f3f3), to(#f8f3f3), color-stop(80%, #acaaaa));
+        background: -webkit-gradient(linear, 0 0, 100% 0, from(#fdfdfd), to(#fdfdfd), color-stop(80%, #acaaaa));
     }
     .text {
         display: block;
