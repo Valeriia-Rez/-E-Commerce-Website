@@ -2,6 +2,7 @@ const openFiltersBtn = document.querySelector("[data-selector='filters_open']");
 const closeFiltersBtn = document.querySelector("[data-selector='filters_close']");
 const mobileFilters = document.querySelector("[data-selector='mobile_filters']");
 
+
 const openFiltersHandler = () => {
     if (mobileFilters.classList.contains("d-none")) {
         mobileFilters.classList.remove("d-none");

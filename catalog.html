@@ -41,8 +41,8 @@
 
             <div class="header_search">
                 <form>
-                    <input type="search" class="search_field d-none" placeholder="Style Name">
-                    <img src="img/ico.jpg" alt="search_icon" class="search_icon">
+                    <input type="search" class="search_field d-none" data-selector="search_field" placeholder="Style Name">
+                    <img src="img/ico.jpg" alt="search_icon" class="search_icon" onclick="openSearch()" data-selector="search_icon">
                 </form>
             </div>
         </div>
@@ -182,8 +182,8 @@
 
 
         <section class="products_section">
-            <div class="products_header text-center">
-                <h1 class="products_title d-block">Last weekend <span class="text-danger">extra 50%</span> on all reduced boots and shoulder bags</h1>
+            <div class="products_header products_header_catalog text-center">
+                <h1 class="d-block">Last weekend <span class="text-danger">extra 50%</span> on all reduced boots and shoulder bags</h1>
                 <p class="products_info"><i>This offer is valid in-store and online. Prices displayed reflect this additional discount. This offer ends at 11:59 GMT on March 1st 2019</i></p>
             </div>
             <div class="products flex-wrap d-flex direction-row-tablet-up justify-around">
@@ -257,7 +257,7 @@
                         <span class="product_price">£85.75</span>
                     </div>
                 </div>
-                <div class="text-center">
+                <div class="button_wrapper text-center">
                     <button class="button primary_button" type="submit">Show more</button>
                 </div>
             </div>
@@ -358,6 +358,7 @@
         </div>
     </footer>
 
+    <script src="js/app.js"></script>
     <script src="js/catalog.js"></script>
 </body>
 

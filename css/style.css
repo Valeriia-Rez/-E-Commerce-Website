@@ -267,7 +267,7 @@ body {
     line-height: 35px;
 }
 
-.products_title_offer {
+.products_title_big {
     font-size: 26px;
 }
 
@@ -410,6 +410,10 @@ body {
 .add_bag {
     padding: 10% 18%;
     text-align: center;
+}
+
+.button_wrapper {
+    margin-top: 75px;
 }
 
 .heading_arrivals {
@@ -572,6 +576,12 @@ body {
     .header_nav:active {
         color: var(--danger-color);
     }
+    .search_field {
+        border: none;
+        border-bottom: 2px solid var(--lightGray-color);
+        outline: none;
+        padding-bottom: 5%;
+    }
     /*********************************
     ***********Filters**/
     .filters_header {
@@ -593,7 +603,6 @@ body {
         float: left;
     }
     .products {
-        margin-bottom: 75px;
         padding: 0 38px;
     }
     .product_items {
@@ -601,6 +610,9 @@ body {
     }
     .products_header {
         padding: 100px 38px;
+    }
+    .products_header_catalog {
+        padding: 50px 38px;
     }
     .products_header_arrivals {
         padding-bottom: 80px;
@@ -612,7 +624,6 @@ body {
     }
     .product_item {
         max-width: 205px;
-        width: 33.33%;
     }
     .product_item img {
         height: 290px;
@@ -626,7 +637,7 @@ body {
         width: 30%;
     }
     .products_discount:before {
-        left: 17%;
+        left: 0;
         top: 27%;
     }
     .price_before_discount {
@@ -669,7 +680,7 @@ body {
     .footer_bottom {
         display: flex;
         flex-direction: row-reverse;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
     }
     .policy_and_copyRights {
@@ -686,7 +697,7 @@ body {
         font-size: 12px;
     }
     .footer_share {
-        font-size: 16px;
+        font-size: 14px;
     }
     .share_num {
         bottom: 51px;
@@ -728,27 +739,19 @@ body {
     .nav_main {
         font-size: 13px;
     }
-    .search_field {
-        display: block;
-        border: none;
-        border-bottom: 2px solid var(--lightGray-color);
-        outline: none;
-        padding-bottom: 5%;
-    }
     .search_icon {
         position: absolute;
         bottom: 15%;
         right: 5%;
+    }
+    .search_field {
+        display: block;
     }
     .banner_text {
         font-size: 28px;
     }
     .product_item {
         max-width: 240px;
-        width: 25%;
-    }
-    .product_items {
-        width: 50%;
     }
     .products_title {
         font-size: 50px;
