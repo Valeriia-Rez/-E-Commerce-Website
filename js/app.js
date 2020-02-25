@@ -3,7 +3,7 @@ const searchInput = document.querySelector("[data-selector='search_field']");
 const openMobileBtn = document.querySelector("[data-selector='mobile_open']");
 const closeMobileBtn = document.querySelector("[data-selector='mobile_close']");
 const mobileMenu = document.querySelector("[data-selector='mobile_menu']");
-
+const verticalDivider = document.querySelector("[data-selector='vertical_divider']");
 
 
 
@@ -19,7 +19,7 @@ const openMobileHandler = () => {
         mobileMenu.classList.remove("d-none");
         openMobileBtn.classList.add("d-none");
         closeMobileBtn.classList.remove("d-none");
-
+        verticalDivider.classList.add("d-none");
     }
 
 }

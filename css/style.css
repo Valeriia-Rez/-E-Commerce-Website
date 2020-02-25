@@ -86,6 +86,10 @@ body {
     color: var(--main-color);
 }
 
+.f-size-24 {
+    font-size: 24px;
+}
+
 .f-size-20 {
     font-size: 20px;
 }
@@ -100,6 +104,10 @@ body {
 
 .f-size-14 {
     font-size: 14px;
+}
+
+.f-size-12 {
+    font-size: 12px;
 }
 
 .crossItem {
@@ -159,6 +167,12 @@ body {
 /*********************
 ***********Mobile menu**/
 
+.mobile {
+    padding: 5% 8%;
+}
+
+.mobile_search_field {}
+
 .mobile_menu {
     border-top: 1px solid var(--lightGray-color);
 }
@@ -183,7 +197,7 @@ body {
     border: none;
     border-bottom: 2px solid var(--lightGray-color);
     outline: none;
-    padding-bottom: 5%;
+    padding-bottom: 3%;
 }
 
 
@@ -225,6 +239,9 @@ body {
 
 .item_property {
     padding: 5%;
+    flex-wrap: wrap;
+    max-width: 340px;
+    margin: 0 auto;
 }
 
 .item_btn {
@@ -232,6 +249,7 @@ body {
     background-color: transparent;
     font-weight: bold;
     outline: none;
+    margin: 15px;
 }
 
 .item_btn:focus {
@@ -301,6 +319,12 @@ body {
 .mobile_filters_list .filter_items {
     list-style-type: disc;
     margin-top: 5%;
+}
+
+.mobile_search_icon {
+    position: absolute;
+    left: 46%;
+    bottom: 35%;
 }
 
 
@@ -414,6 +438,7 @@ body {
 }
 
 .product_items {
+    padding-bottom: 10%;
     position: relative;
 }
 
@@ -483,11 +508,20 @@ body {
     bottom: 30%;
 }
 
+.products_header_catalog {
+    width: 87%;
+    margin: 0 auto;
+}
+
 .price_before_discount {
     position: relative;
     font-size: 18px;
     font-family: var(--font-secondary);
     color: #757575;
+}
+
+.price_before_discount_catalog {
+    font-size: 12px;
 }
 
 .price_after_discount {
@@ -715,21 +749,20 @@ body {
         float: left;
     }
     .products {
-        padding: 0 38px 50px 38px;
+        padding: 0 38px;
     }
     .product_items {
         width: 70%;
-    }
-    .products_header {
-        padding: 100px 38px;
-    }
-    .products_header_catalog {
-        padding: 0 38px 50px 38px;
     }
     .products_title {
         font-size: 40px;
         font-weight: bold;
         font-family: var(--font-primary);
+    }
+    .products_title_catalog {
+        font-size: 20px;
+        width: 67%;
+        margin: 0 auto;
     }
     .product_item {
         max-width: 205px;
@@ -740,7 +773,7 @@ body {
     }
     .info_block {
         font-size: 16px;
-        padding: 0 12%;
+        padding: 2% 4%;
     }
     .products_discount {
         justify-content: flex-end;
@@ -868,6 +901,10 @@ body {
     }
     .products_title {
         font-size: 50px;
+    }
+    .products_title_catalog {
+        font-size: 24px;
+        width: 100%;
     }
     .product_item img {
         height: 340px;

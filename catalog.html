@@ -20,14 +20,14 @@
                 <a href="#" class="header_email d-none d-block-tablet-up">E-mail sing up</a>
                 <a href="#" class="header_bag"><img src="img/ico_bag.jpg" alt="bag" class="header_icon">Bag (0)</a>
             </div>
-            <div class="vertical_divider d-none-tablet-up"></div>
+            <div class="vertical_divider d-none-tablet-up" data-selector="vertical_divider"></div>
             <div class="mobile_icon d-none-tablet-up">
                 <div onclick="openMobileHandler()" data-selector="mobile_open">
                     <span class="gamburger"></span>
                     <span class="gamburger"></span>
                     <span class="gamburger"></span>
                 </div>
-                <span onclick="closeMobileHandler()" class="d-none text-danger" data-selector="mobile_close">&#10006;</span>
+                <span onclick="closeMobileHandler()" class="d-none text-danger f-size-20" data-selector="mobile_close">&#10006;</span>
             </div>
         </div>
         <div class="mobile_menu d-none" data-selector="mobile_menu">
@@ -41,10 +41,10 @@
                 <li><a href="#" class="mobile_link text-dark">Clearance</a></li>
                 <li><a href="#" class="mobile_link text-dark">Store Locator</a></li>
             </ul>
-            <div class="header_search">
+            <div class="header_search mobile">
                 <form>
                     <input type="search" class="search_field" data-selector="search_field" placeholder="Style Name">
-                    <img src="img/ico.jpg" alt="search_icon" class="search_icon">
+                    <img src="img/ico.jpg" alt="search_icon" class="search_icon mobile_search_icon">
                 </form>
             </div>
         </div>
@@ -206,7 +206,7 @@
 
         <section class="products_section">
             <div class="products_header products_header_catalog text-center">
-                <h1 class="d-block">Last weekend <span class="text-danger">extra 50%</span> off on all reduced boots and shoulder bags</h1>
+                <h1 class="f-size-24">Last weekend <span class="text-danger">extra 50%</span> off on all reduced boots and shoulder bags</h1>
                 <p class="info_block"><i>This offer is valid in-store and online. Prices displayed reflect this additional discount. This offer ends at 11:59 GMT on March 1st 2019</i></p>
             </div>
             <div class="products flex-wrap d-flex direction-row-tablet-up justify-around">
@@ -235,8 +235,8 @@
                     <img src="img/photo7.jpg" alt="Boyfriend T-Shirt">
                     <div class="product_info d-flex flex-direction-column text-center">
                         <a href="#" class="product_name">Boyfriend T-Shirt with Bohemian Print</a>
-                        <div class="discount_amounts text-center">
-                            <span class="price_before_discount">£120.00
+                        <div class="discount_amounts_catalog">
+                            <span class="price_before_discount price_before_discount_catalog">£120.00
                             <hr class="crossItem">
                         </span>
                             <span class="product_price">£90.00</span>
@@ -304,7 +304,7 @@
                 <img src="img/fon5.jpg" alt="Adidas for Men" class="banner_img">
             </div>
             <div class="promo_banner d-none d-block-tablet-up">
-                <div class="banner_text text-center text-white">
+                <div class="banner_text  text-center text-white">
                     <span>Repair Patches</span>
                     <br>
                     <span class="banner_sale"><i>£ 150.50</i></span>
