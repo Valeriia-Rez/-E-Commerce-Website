@@ -38,6 +38,10 @@ body {
     flex-direction: column;
 }
 
+.flex-direction-row {
+    flex-direction: row;
+}
+
 .justify-between {
     justify-content: space-between;
 }
@@ -186,27 +190,36 @@ body {
 /******************Back****
 ******/
 
+.back {
+    padding-left: 2%;
+}
+
 .back_pannel {
-    padding: 5%;
+    height: 55px;
     border-bottom: 1px solid var(--lightGray-color);
     border-top: 1px solid var(--lightGray-color);
+    padding: 0 5%;
 }
 
 
 /**************************
 ***********New block item*/
 
-.back {
-    padding-left: 2%;
+.item_section {
+    padding: 5% 5% 12% 5%;
 }
 
-.item_section {
-    padding: 5% 5% 25% 5%;
+.item_primary_image {
+    width: 100%;
+}
+
+.item_secondary_image {
+    width: 33.33%;
 }
 
 .item_text {
     font-family: var(--font-secondary);
-    padding: 14% 5% 2% 5%;
+    padding-top: 5%;
     line-height: 40px;
 }
 
@@ -504,10 +517,6 @@ body {
     text-align: center;
 }
 
-.button_wrapper {
-    margin-top: 75px;
-}
-
 .heading_arrivals {
     padding: 10% 0 5% 0;
 }
@@ -668,6 +677,23 @@ body {
     .header_nav:active {
         color: var(--danger-color);
     }
+    /**************Back pannel***
+    ***/
+    .back_pannel {
+        height: 65px;
+        font-size: 16px;
+    }
+    /******************************
+    *********************/
+    .items {
+        flex-direction: row;
+    }
+    .item_secondary {
+        flex-direction: column;
+    }
+    .item_secondary_image {
+        width: 100%;
+    }
     /*********************************
     ***********Filters**/
     .filters_header {
@@ -689,7 +715,7 @@ body {
         float: left;
     }
     .products {
-        padding: 0 38px;
+        padding: 0 38px 50px 38px;
     }
     .product_items {
         width: 70%;
@@ -698,7 +724,7 @@ body {
         padding: 100px 38px;
     }
     .products_header_catalog {
-        padding: 50px 38px;
+        padding: 0 38px 50px 38px;
     }
     .products_title {
         font-size: 40px;
@@ -714,6 +740,7 @@ body {
     }
     .info_block {
         font-size: 16px;
+        padding: 0 12%;
     }
     .products_discount {
         justify-content: flex-end;
@@ -845,6 +872,21 @@ body {
     .product_item img {
         height: 340px;
         width: 240px;
+    }
+    .button_wrapper {
+        margin-top: 50px;
+    }
+    .items {
+        flex-direction: column;
+    }
+    .item_secondary {
+        flex-direction: row;
+    }
+    .item_primary_image {
+        width: 100%;
+    }
+    .item_secondary_image {
+        width: 33.33%;
     }
     .footer_info {
         width: 50%;
