@@ -21,10 +21,31 @@
                 <a href="#" class="header_bag"><img src="img/ico_bag.jpg" alt="bag" class="header_icon">Bag (0)</a>
             </div>
             <div class="vertical_divider d-none-tablet-up"></div>
-            <div class="header_menu d-none-tablet-up">
-                <span class="gamburger"></span>
-                <span class="gamburger"></span>
-                <span class="gamburger"></span>
+            <div class="mobile_icon d-none-tablet-up">
+                <div onclick="openMobileHandler()" data-selector="mobile_open">
+                    <span class="gamburger"></span>
+                    <span class="gamburger"></span>
+                    <span class="gamburger"></span>
+                </div>
+                <span onclick="closeMobileHandler()" class="d-none text-danger" data-selector="mobile_close">&#10006;</span>
+            </div>
+        </div>
+        <div class="mobile_menu d-none" data-selector="mobile_menu">
+            <ul class="mobile_menu_list">
+                <li><a href="#" class="mobile_link text-danger">Women</a></li>
+                <li><a href="#" class="mobile_link text-dark">Men</a></li>
+                <li><a href="#" class="mobile_link text-dark">Handbags</a></li>
+                <li><a href="#" class="mobile_link text-dark">Accessories</a></li>
+                <li><a href="#" class="mobile_link text-dark">Sale</a></li>
+                <li><a href="#" class="mobile_link text-dark">New Arrivals</a></li>
+                <li><a href="#" class="mobile_link text-dark">Clearance</a></li>
+                <li><a href="#" class="mobile_link text-dark">Store Locator</a></li>
+            </ul>
+            <div class="header_search">
+                <form>
+                    <input type="search" class="search_field" data-selector="search_field" placeholder="Style Name">
+                    <img src="img/ico.jpg" alt="search_icon" class="search_icon">
+                </form>
             </div>
         </div>
         <div class="header_navbar d-none d-flex-tablet-up justify-between">
@@ -45,7 +66,9 @@
                     <img src="img/ico.jpg" alt="search_icon" class="search_icon" onclick="openSearch()" data-selector="search_icon">
                 </form>
             </div>
+
         </div>
+
     </header>
 
     <main class="container">
@@ -183,8 +206,8 @@
 
         <section class="products_section">
             <div class="products_header products_header_catalog text-center">
-                <h1 class="d-block">Last weekend <span class="text-danger">extra 50%</span> on all reduced boots and shoulder bags</h1>
-                <p class="products_info"><i>This offer is valid in-store and online. Prices displayed reflect this additional discount. This offer ends at 11:59 GMT on March 1st 2019</i></p>
+                <h1 class="d-block">Last weekend <span class="text-danger">extra 50%</span> off on all reduced boots and shoulder bags</h1>
+                <p class="info_block"><i>This offer is valid in-store and online. Prices displayed reflect this additional discount. This offer ends at 11:59 GMT on March 1st 2019</i></p>
             </div>
             <div class="products flex-wrap d-flex direction-row-tablet-up justify-around">
                 <div class="product_item d-none-tablet-up">
@@ -212,7 +235,12 @@
                     <img src="img/photo7.jpg" alt="Boyfriend T-Shirt">
                     <div class="product_info d-flex flex-direction-column text-center">
                         <a href="#" class="product_name">Boyfriend T-Shirt with Bohemian Print</a>
-                        <span class="product_price">£90.00</span>
+                        <div class="discount_amounts text-center">
+                            <span class="price_before_discount">£120.00
+                            <hr class="crossItem">
+                        </span>
+                            <span class="product_price">£90.00</span>
+                        </div>
                     </div>
                 </div>
                 <div class="product_item">
@@ -264,8 +292,8 @@
         </section>
     </main>
 
-    <div class="banner">
-        <div class="promo_banners">
+    <section class="banner">
+        <div class="promo_banners d-flex">
             <div class="promo_banner">
                 <div class="banner_text text-center text-white">
                     <span>Adidas Blue</span>
@@ -275,8 +303,8 @@
                 <img src="img/fon5.jpg" alt="Adidas for Men" class="banner_img">
             </div>
             <div class="promo_banner d-none d-block-tablet-up">
-                <div class="banner_text text-center">
-                    <span class="banner_text">Repair Patches</span>
+                <div class="banner_text text-center text-white">
+                    <span>Repair Patches</span>
                     <br>
                     <span class="banner_sale"><i>£ 150.50</i></span>
                 </div>
@@ -284,14 +312,14 @@
             </div>
             <div class="promo_banner d-none d-block-desktop-up">
                 <div class="banner_text text-center">
-                    <span class="banner_text">Repair Patches</span>
+                    <span class="text-danger">Sale</span>
                     <br>
-                    <span class="banner_sale"><i>£ 150.50</i></span>
+                    <span class="banner_sale text-gray"><i>70%</i></span>
                 </div>
-                <img src="img/photo15.jpg" alt="Repair Patches" class="banner_img">
+                <img src="img/photo15.jpg" alt="Sale" class="banner_img">
             </div>
         </div>
-    </div>
+    </section>
 
     <footer class="footer d-flex flex-direction-column">
         <div class="site_map d-flex flex-direction-column">

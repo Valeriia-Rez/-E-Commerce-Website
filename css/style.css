@@ -82,6 +82,22 @@ body {
     color: var(--main-color);
 }
 
+.f-size-20 {
+    font-size: 20px;
+}
+
+.f-size-18 {
+    font-size: 18px;
+}
+
+.f-size-16 {
+    font-size: 16px;
+}
+
+.f-size-14 {
+    font-size: 14px;
+}
+
 .crossItem {
     position: absolute;
     top: 50%;
@@ -90,10 +106,6 @@ body {
     width: 95%;
     height: 0;
     transform: rotate(-30deg);
-}
-
-.header_wrapper {
-    height: 70px;
 }
 
 .header {
@@ -127,7 +139,7 @@ body {
     padding-right: 15px;
 }
 
-.header_menu {
+.mobile_icon {
     align-self: center;
     padding: 7% 5%;
 }
@@ -137,6 +149,85 @@ body {
     width: 20px;
     display: block;
     height: 7px;
+}
+
+
+/*********************
+***********Mobile menu**/
+
+.mobile_menu {
+    border-top: 1px solid var(--lightGray-color);
+}
+
+.mobile_menu_list {
+    padding: 5%;
+    list-style-type: none;
+}
+
+.mobile_menu_list li {
+    padding: 3%;
+}
+
+.mobile_link {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: var(--font-primary);
+}
+
+.search_field {
+    border: none;
+    border-bottom: 2px solid var(--lightGray-color);
+    outline: none;
+    padding-bottom: 5%;
+}
+
+
+/******************Back****
+******/
+
+.back_pannel {
+    padding: 5%;
+    border-bottom: 1px solid var(--lightGray-color);
+    border-top: 1px solid var(--lightGray-color);
+}
+
+
+/**************************
+***********New block item*/
+
+.back {
+    padding-left: 2%;
+}
+
+.item_section {
+    padding: 5% 5% 25% 5%;
+}
+
+.item_text {
+    font-family: var(--font-secondary);
+    padding: 14% 5% 2% 5%;
+    line-height: 40px;
+}
+
+.item_property {
+    padding: 5%;
+}
+
+.item_btn {
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    outline: none;
+}
+
+.item_btn:focus {
+    border: 1px solid var(--lightGray-color);
+    padding: 2% 4%;
+}
+
+.item_values {
+    padding: 5% 0;
 }
 
 
@@ -253,11 +344,11 @@ body {
 }
 
 .products_header {
-    padding: 50px 21px 100px;
+    padding: 50px 32px 100px;
 }
 
 .products_header_arrivals {
-    padding: 100px 0 70px;
+    padding: 100px 0 50px;
 }
 
 .products_title {
@@ -265,17 +356,17 @@ body {
     color: var(--main-color);
     font-weight: bold;
     line-height: 35px;
+    margin-bottom: 20px;
 }
 
 .products_title_big {
     font-size: 26px;
 }
 
-.products_info {
+.info_block {
     font-size: 14px;
     font-family: 'Times New Roman', Times, serif;
     line-height: 30px;
-    margin-top: 20px;
 }
 
 .products {
@@ -349,6 +440,7 @@ body {
 .product_info {
     line-height: 24px;
     font-size: 12px;
+    font-family: var(--font-secondary);
     padding-bottom: 20%;
 }
 
@@ -549,7 +641,7 @@ body {
         font-size: 12px;
         font-family: var(--font-secondary);
         border: none;
-        padding: 3%;
+        padding: 3% 5%;
     }
     .header_email {
         text-decoration: none;
@@ -561,7 +653,7 @@ body {
     }
     .header_navbar {
         justify-content: space-between;
-        padding: 0 5% 2%;
+        padding: 2% 5% 0;
     }
     .nav_main {
         font-weight: bold;
@@ -575,12 +667,6 @@ body {
     .header_nav:hover,
     .header_nav:active {
         color: var(--danger-color);
-    }
-    .search_field {
-        border: none;
-        border-bottom: 2px solid var(--lightGray-color);
-        outline: none;
-        padding-bottom: 5%;
     }
     /*********************************
     ***********Filters**/
@@ -614,9 +700,6 @@ body {
     .products_header_catalog {
         padding: 50px 38px;
     }
-    .products_header_arrivals {
-        padding-bottom: 80px;
-    }
     .products_title {
         font-size: 40px;
         font-weight: bold;
@@ -629,7 +712,7 @@ body {
         height: 290px;
         width: auto;
     }
-    .products_info {
+    .info_block {
         font-size: 16px;
     }
     .products_discount {
@@ -718,6 +801,9 @@ body {
     }
     .d-block-desktop-up {
         display: block;
+    }
+    .header_navbar {
+        padding: 0 5%;
     }
     .banner {
         max-width: 1300px;
