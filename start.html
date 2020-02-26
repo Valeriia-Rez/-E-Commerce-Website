@@ -5,76 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+
     <title>E_Commerce Website</title>
 </head>
 
 <body>
 
-    <header class="container header_wrapper">
-        <div class="header d-flex">
-            <div class="header_logo d-flex f-size-26-tablet">
-                <h3 class="logo d-none d-block-tablet-up f-size-24">Template</h3>
-                <h3 class="logo d-none-tablet-up f-size-24">TL</h3>
-            </div>
-            <div class="header_shopArea d-flex align-items-center">
-                <a href="#" class="header_email d-none d-block-tablet-up">E-mail sing up</a>
-                <a href="#" class="header_bag"><img src="img/ico_bag.jpg" alt="bag" class="header_icon">Bag (0)</a>
-            </div>
-            <div class="vertical_divider d-none-tablet-up" data-selector="vertical_divider"></div>
-            <div class="mobile_icon d-none-tablet-up">
-                <div onclick="openMobileHandler()" data-selector="mobile_open">
-                    <span class="gamburger"></span>
-                    <span class="gamburger"></span>
-                    <span class="gamburger"></span>
-                </div>
-                <span onclick="closeMobileHandler()" class="d-none text-danger f-size-20" data-selector="mobile_close">&#10006;</span>
-            </div>
-        </div>
-        <div class="mobile_menu d-none" data-selector="mobile_menu">
-            <ul class="mobile_menu_list">
-                <li><a href="#" class="mobile_link text-danger f-size-24">Women</a></li>
-                <li><a href="#" class="mobile_link text-dark f-size-24">Men</a></li>
-                <li><a href="#" class="mobile_link text-dark f-size-24">Handbags</a></li>
-                <li><a href="#" class="mobile_link text-dark f-size-24">Accessories</a></li>
-                <li><a href="#" class="mobile_link text-dark f-size-24">Sale</a></li>
-                <li><a href="#" class="mobile_link text-dark f-size-24">New Arrivals</a></li>
-                <li><a href="#" class="mobile_link text-dark f-size-24">Clearance</a></li>
-                <li><a href="#" class="mobile_link text-dark f-size-24">Store Locator</a></li>
-            </ul>
-            <div class="header_search mobile">
-                <form>
-                    <input type="search" class="search_field" data-selector="search_field" placeholder="Style Name">
-                    <img src="img/ico.jpg" alt="search_icon" class="search_icon mobile_search_icon">
-                </form>
-            </div>
-        </div>
-        <div class="header_navbar d-none d-flex-tablet-up justify-between">
-            <nav class="nav_main f-size-13-desktop">
-                <a href="#" class="header_nav">Women</a>
-                <a href="#" class="header_nav">Men</a>
-                <a href="#" class="header_nav">Handbags</a>
-                <a href="#" class="header_nav">Accessories</a>
-                <a href="#" class="header_nav">Sale</a>
-                <a href="#" class="header_nav">New Arrivals</a>
-                <a href="#" class="header_nav">Clearance</a>
-                <a href="#" class="header_nav">Store Locator</a>
-            </nav>
-
-            <div class="header_search">
-                <form>
-                    <input type="search" class="search_field d-none" data-selector="search_field" placeholder="Style Name">
-                    <img src="img/ico.jpg" alt="search_icon" class="search_icon" onclick="openSearch()" data-selector="search_icon">
-                </form>
-            </div>
-
-        </div>
-
+    <header class="container header_wrapper" data-selector="header">
     </header>
-
-
-
-
-
     <div class="banner">
         <hr class="dividerLine">
         <div class="promo_banners">
@@ -102,10 +40,10 @@
             </div>
             <div class="products d-flex flex-direction-column direction-row-tablet-up justify-between">
                 <div class="product_items d-flex justify-around">
-                    <div class="product_item new_product multi">
-                        <span class="new_product_promo">New</span>
+                    <div class="product_item multi">
+                        <span class="product_item_promo">New</span>
                         <img src="img/photo2.jpg" alt="Skinny Jeans">
-                        <div class="product_info d-flex flex-direction-column text-center">
+                        <div class="product_info d-flex flex-direction-column text-center f-size-14-tablet">
                             <a href="#" class="product_name">Only Skinny Jeans</a>
                             <span class="product_price">£66.50</span>
                         </div>
@@ -113,7 +51,7 @@
                     <span class="plus d-block f-size-26">+</span>
                     <div class="product_item multi">
                         <img src="img/photo3.jpg" alt="Levi's Jeans">
-                        <div class="product_info d-flex flex-direction-column text-center">
+                        <div class="product_info d-flex flex-direction-column text-center f-size-14-tablet">
                             <a href="#" class="product_name">Levi's Jeans for women</a>
                             <span class="product_price">£95.50</span>
                         </div>
@@ -147,32 +85,32 @@
                 <h1><a href="#" class="products_title d-block f-size-26 f-size-40 f-size-50-desktop">New arrivals</a></h1>
             </div>
             <div class="products d-flex justify-around">
-                <div class="product_item new_product">
-                    <span class="new_product_promo">New</span>
+                <div class="product_item">
+                    <span class="product_item_promo">New</span>
                     <img src="img/photo2.jpg" alt="Skinny Jeans">
-                    <div class="product_info d-flex flex-direction-column text-center">
+                    <div class="product_info d-flex flex-direction-column text-center f-size-14-tablet">
                         <a href="#" class="product_name">Only Skinny Jeans</a>
                         <span class="product_price">£66.50</span>
                     </div>
                 </div>
-                <div class="product_item new_product">
-                    <span class="new_product_promo">New</span>
+                <div class="product_item">
+                    <span class="product_item_promo">New</span>
                     <img src="img/photo5.jpg" alt="Neck Knitted Jumper">
-                    <div class="product_info d-flex flex-direction-column text-center">
+                    <div class="product_info d-flex flex-direction-column text-center f-size-14-tablet">
                         <a href="#" class="product_name">Neck Knitted Jumper</a>
                         <span class="product_price">£76.25</span>
                     </div>
                 </div>
                 <div class="product_item d-none d-block-tablet-up">
                     <img src="img/photo6.jpg" alt="Turtle Neck Jumper">
-                    <div class="product_info d-flex flex-direction-column text-center">
+                    <div class="product_info d-flex flex-direction-column text-center f-size-14-tablet">
                         <a href="#" class="product_name">Turtle Neck Jumper in RiB</a>
                         <span class="product_price">£130.25</span>
                     </div>
                 </div>
                 <div class="product_item d-none d-block-desktop-up">
                     <img src="img/photo_6.jpg" alt="With Patchwork Crochet">
-                    <div class="product_info d-flex flex-direction-column text-center">
+                    <div class="product_info d-flex flex-direction-column text-center f-size-14-tablet">
                         <a href="#" class="product_name">With Patchwork Crochet</a>
                         <span class="product_price">£80.60</span>
                     </div>
@@ -250,7 +188,8 @@
             </div>
         </footer>
 
-        <script src="js/app.js"></script>
+        <script src="js/headerComponent.js"></script>
+        <script src="js/app.js" async="false"></script>
 </body>
 
 </html>

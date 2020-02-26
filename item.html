@@ -10,63 +10,9 @@
 
 <body>
 
-    <header class="container header_wrapper">
-        <div class="header d-flex">
-            <div class="header_logo d-flex f-size-26-tablet">
-                <h3 class="logo d-none d-block-tablet-up">Template</h3>
-                <h3 class="logo d-none-tablet-up">TL</h3>
-            </div>
-            <div class="header_shopArea d-flex align-items-center">
-                <a href="#" class="header_email d-none d-block-tablet-up">E-mail sing up</a>
-                <a href="#" class="header_bag"><img src="img/ico_bag.jpg" alt="bag" class="header_icon">Bag (0)</a>
-            </div>
-            <div class="vertical_divider d-none-tablet-up"></div>
-            <div class="mobile_icon d-none-tablet-up">
-                <div onclick="openMobileHandler()" data-selector="mobile_open">
-                    <span class="gamburger"></span>
-                    <span class="gamburger"></span>
-                    <span class="gamburger"></span>
-                </div>
-                <span onclick="closeMobileHandler()" class="d-none text-danger" data-selector="mobile_close">&#10006;</span>
-            </div>
-        </div>
-        <div class="mobile_menu d-none" data-selector="mobile_menu">
-            <ul class="mobile_menu_list">
-                <li><a href="#" class="mobile_link text-danger f-size-24">Women</a></li>
-                <li><a href="#" class="mobile_link text-dark f-size-24">Men</a></li>
-                <li><a href="#" class="mobile_link text-dark f-size-24">Handbags</a></li>
-                <li><a href="#" class="mobile_link text-dark f-size-24">Accessories</a></li>
-                <li><a href="#" class="mobile_link text-dark f-size-24">Sale</a></li>
-                <li><a href="#" class="mobile_link text-dark f-size-24">New Arrivals</a></li>
-                <li><a href="#" class="mobile_link text-dark f-size-24">Clearance</a></li>
-                <li><a href="#" class="mobile_link text-dark f-size-24">Store Locator</a></li>
-            </ul>
-            <div class="header_search">
-                <form>
-                    <input type="search" class="search_field" data-selector="search_field" placeholder="Style Name">
-                    <img src="img/ico.jpg" alt="search_icon" class="search_icon">
-                </form>
-            </div>
-        </div>
-        <div class="header_navbar d-none d-flex-tablet-up justify-between">
-            <nav class="nav_main f-size-13-desktop">
-                <a href="#" class="header_nav">Women</a>
-                <a href="#" class="header_nav">Men</a>
-                <a href="#" class="header_nav">Handbags</a>
-                <a href="#" class="header_nav">Accessories</a>
-                <a href="#" class="header_nav">Sale</a>
-                <a href="#" class="header_nav">New Arrivals</a>
-                <a href="#" class="header_nav">Clearance</a>
-                <a href="#" class="header_nav">Store Locator</a>
-            </nav>
-            <div class="header_search">
-                <form>
-                    <input type="search" class="search_field d-none" data-selector="search_field" placeholder="Style Name">
-                    <img src="img/ico.jpg" alt="search_icon" class="search_icon" onclick="openSearch()" data-selector="search_icon">
-                </form>
-            </div>
-        </div>
+    <header class="container header_wrapper" data-selector="header">
     </header>
+
     <main class="container">
         <section class="block">
             <div class="block_pannel d-flex align-items-center f-size-16-tablet">
@@ -118,7 +64,7 @@
 
                 </div>
                 <div class="button_wrapper text-center">
-                    <button class="button primary_button" type="submit">Add to bag</button>
+                    <button class="button primary_button f-size-20 f-size-24-desktop" type="submit">Add to bag</button>
                 </div>
             </div>
 
@@ -130,27 +76,27 @@
 
     <section class="banner">
         <div class="promo_banners d-flex">
-            <div class="promo_banner">
-                <div class="banner_text text-center text-white f-size-22 f-size-28-desktop">
+            <div class="promo_banner promo_banner_first">
+                <div class="banner_text text-center text-white f-size-20 f-size-22-tablet f-size-28-desktop">
                     <span>Adidas Blue</span>
                     <br>
-                    <span class="banner_sale"><i>For men</i></span>
+                    <span class="banner_sale f-size-14 f-size-16-tablet"><i>For men</i></span>
                 </div>
                 <img src="img/fon5.jpg" alt="Adidas for Men" class="banner_img">
             </div>
-            <div class="promo_banner d-none d-block-tablet-up">
-                <div class="banner_text text-center text-white f-size-22 f-size-28-desktop">
+            <div class="promo_banner d-none d-block-tablet-up promo_banner_second">
+                <div class="banner_text banner_text_bottom text-center text-white f-size-20 f-size-22-tablet f-size-28-desktop">
                     <span>Repair Patches</span>
                     <br>
-                    <span class="banner_sale"><i>£ 150.50</i></span>
+                    <span class="banner_sale f-size-14 f-size-16-tablet"><i>£ 150.50</i></span>
                 </div>
                 <img src="img/photo14.jpg" alt="Repair Patches" class="banner_img">
             </div>
-            <div class="promo_banner d-none d-block-desktop-up">
-                <div class="banner_text text-center f-size-22 f-size-28-desktop">
+            <div class="promo_banner d-none d-block-desktop-up promo_banner_third">
+                <div class="banner_text banner_text_bottom text-center f-size-20 f-size-22-tablet f-size-28-desktop">
                     <span class="text-danger">Sale</span>
                     <br>
-                    <span class="banner_sale text-gray"><i>70%</i></span>
+                    <span class="banner_sale text-gray f-size-14 f-size-16-tablet"><i>70%</i></span>
                 </div>
                 <img src="img/photo15.jpg" alt="Sale" class="banner_img">
             </div>
@@ -223,9 +169,9 @@
         </div>
     </footer>
 
+    <script src="js/headerComponent.js"></script>
+    <script src="js/app.js" async="false"></script>
 
-    <script src="js/app.js"></script>
-    <script src="js/catalog.js"></script>
 </body>
 
 </html>
