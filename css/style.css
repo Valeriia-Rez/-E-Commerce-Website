@@ -21,6 +21,7 @@ body {
     font-family: var(--font-primary);
     color: var(--main-color);
     font-size: 12px;
+    background-color: var(--white-color);
 }
 
 .d-flex {
@@ -135,6 +136,22 @@ body {
     font-size: 10px;
 }
 
+.pr-1 {
+    padding-right: 4px;
+}
+
+.pr-2 {
+    padding-right: 8px;
+}
+
+.pr-3 {
+    padding-right: 16px;
+}
+
+.pr-4 {
+    padding-right: 24px;
+}
+
 
 /*Header*/
 
@@ -225,10 +242,6 @@ body {
 
 /*Block*/
 
-.block_heading {
-    padding-left: 2%;
-}
-
 .block_pannel {
     height: 55px;
     border-bottom: 1px solid var(--lightGray-color);
@@ -240,12 +253,13 @@ body {
 /*Filters*/
 
 .product_filters {
-    padding-left: 5%;
+    padding: 0 5%;
     margin-bottom: 5%;
     border-top: 1px solid var(--lightGray-color);
     border-bottom: 1px solid var(--lightGray-color);
     font-weight: bold;
     height: 55px;
+    z-index: -1;
 }
 
 .filters_header_text {
@@ -538,18 +552,25 @@ body {
     width: 85%;
 }
 
-.item_btn {
+.item_button_wrapper input {
+    visibility: hidden;
+}
+
+.item_button_wrapper input:checked+label {
+    border: 1px solid var(--lightGray-color);
+}
+
+.item_button_wrapper label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
     border: none;
     background-color: transparent;
     font-weight: bold;
     outline: none;
-    margin: 0 10px;
     width: 80px;
     height: 40px;
-}
-
-.item_btn:focus {
-    border: 1px solid var(--lightGray-color);
 }
 
 
@@ -560,6 +581,7 @@ body {
 }
 
 .site_map {
+    border-top: 1px solid var(--lightGray-color);
     border-bottom: 1px solid var(--lightGray-color);
 }
 
@@ -941,6 +963,51 @@ body {
     .header_nav:hover,
     .header_nav:active {
         color: var(--danger-color);
+    }
+    /*Desktop Filter*/
+    .desktop_product_filters_pannel {
+        width: 100%;
+        height: 100%;
+    }
+    .desktop_filters_list {
+        height: 100%;
+        align-items: center;
+    }
+    .desktop_filter {
+        position: relative;
+        display: inline-block;
+        background-color: var(--white-color);
+        height: 100%;
+        width: 16.66%;
+        cursor: pointer;
+    }
+    .desktop_filter:hover {
+        border: 1px solid var(--lightGray-color);
+    }
+    .desktop_filter:hover .desktop_filter_items {
+        display: block;
+    }
+    .desktop_filter_items {
+        display: none;
+        position: absolute;
+        top: 62px;
+        width: 100%;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        background-color: var(--white-color);
+        list-style-type: none;
+        cursor: pointer;
+    }
+    .desktop_filter_items li:hover {
+        color: var(--danger-color);
+        background-color: var(--lightGray-color);
+    }
+    .desktop_filter_header {
+        height: 100%;
+        padding: 0 5%;
+    }
+    .desktop_filter_items li {
+        padding: 5% 7%;
     }
     /*Banner*/
     .banner {

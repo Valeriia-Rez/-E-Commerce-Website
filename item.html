@@ -16,7 +16,7 @@
     <main class="container">
         <section class="block">
             <div class="block_pannel d-flex align-items-center f-size-16-tablet">
-                <span>&#60;</span>
+                <span class="pr-3">&#60;</span>
                 <h4 class="block_heading">Back to catalog</h4>
             </div>
         </section>
@@ -49,16 +49,21 @@
                     <div class="item_size d-flex align-items-center justify-between">
                         <div class="item_description">Size</div>
                         <div class="item_button_wrapper d-flex">
-                            <button class="item_btn" type="submit">UK 52</button>
-                            <button class="item_btn" type="submit">UK 56</button>
-                            <button class="item_btn" type="submit">UK 54</button>
+                            <input type="radio" name="size" class="item_btn" id="52" value="52" />
+                            <label for="52">UK 52</label>
+                            <input type="radio" name="size" class="item_btn" id="56" value="56" />
+                            <label for="56">UK 56</label>
+                            <input type="radio" name="size" class="item_btn" id="54" value="54" />
+                            <label for="54">UK 54</label>
                         </div>
                     </div>
                     <div class="item_color d-flex align-items-center justify-between">
                         <div class="item_description">Color</div>
                         <div class="item_button_wrapper d-flex">
-                            <button class="item_btn" type="submit">Black</button>
-                            <button class="item_btn" type="submit">Blue</button>
+                            <input type="radio" name="color" class="item_btn" type="submit" id="black" value="black" />
+                            <label for="black">Black</label>
+                            <input type="radio" name="color" class="item_btn" type="submit" id="blue" value="blue" />
+                            <label for="blue">Blue</label>
                         </div>
                     </div>
 
