@@ -355,7 +355,7 @@ body {
 }
 
 .info_block {
-    margin-top: 1%;
+    margin: 30px 0;
     font-family: var(--font-tertiary);
 }
 
@@ -486,7 +486,7 @@ body {
 /*Item section*/
 
 .item_section {
-    padding: 5% 5% 12% 5%;
+    padding: 15px 20px 100px;
 }
 
 .item_primary {
@@ -509,12 +509,12 @@ body {
 
 .item_text {
     font-family: var(--font-secondary);
-    padding-top: 3%;
+    padding-top: 50px;
     line-height: 40px;
 }
 
 .item_block {
-    padding-top: 1%;
+    padding-top: 30px;
 }
 
 .item_price {
@@ -522,10 +522,20 @@ body {
 }
 
 .item_property {
-    padding: 5%;
-    flex-wrap: wrap;
-    max-width: 340px;
-    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.item_size,
+.item_color {
+    margin: 15px 0;
+}
+
+.item_description {
+    width: 8%;
+}
+
+.item_button_wrapper {
+    width: 85%;
 }
 
 .item_btn {
@@ -533,12 +543,13 @@ body {
     background-color: transparent;
     font-weight: bold;
     outline: none;
-    margin: 15px;
+    margin: 0 10px;
+    width: 80px;
+    height: 40px;
 }
 
 .item_btn:focus {
     border: 1px solid var(--lightGray-color);
-    padding: 2% 4%;
 }
 
 
@@ -755,9 +766,6 @@ body {
     .products_title {
         font-weight: bold;
     }
-    .info_block {
-        padding: 2% 4%;
-    }
     .products {
         padding: 0 38px;
     }
@@ -792,6 +800,9 @@ body {
         padding: 22px 95px;
     }
     /*Item Section*/
+    .item_section {
+        padding: 30px 38px 100px;
+    }
     .items {
         flex-direction: row;
     }
@@ -807,8 +818,14 @@ body {
         width: 100%;
     }
     .item_info {
-        width: 70%;
+        width: 71%;
         margin: 0 auto;
+    }
+    .item_text {
+        padding-top: 25px;
+    }
+    .item_property {
+        align-items: center;
     }
     /*Footer*/
     .site_map {
@@ -993,10 +1010,12 @@ body {
     /*Item Section*/
     .item_section {
         flex-direction: row;
+        padding: 60px 60px 100px;
+        border-bottom: 1px solid var(--lightGray-color);
     }
     .items {
         flex-direction: column;
-        width: 90%;
+        width: 88%;
     }
     .item_primary {
         height: 395px;
@@ -1016,11 +1035,15 @@ body {
     .item_block {
         flex-direction: column-reverse;
     }
-    .info_block {
+    .item_price {
+        padding-bottom: 30px;
+    }
+    .info_block,
+    .item_block {
         padding: 0;
     }
-    .info_block_item {
-        padding-bottom: 5%;
+    .item_property {
+        align-items: inherit;
     }
     /*Footer*/
     .footer_info {
