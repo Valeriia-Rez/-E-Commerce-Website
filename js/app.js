@@ -9,6 +9,8 @@ const verticalDivider = document.querySelector("[data-selector='vertical_divider
 
 
 const openSearch = () => {
+    const windowWidth = window.innerWidth;
+    if (windowWidth > 1024) return;
     if (headerNavBar && headerNavBar.classList.contains("expanded")) {
         headerNavBar.classList.remove("expanded");
     } else {

@@ -14,128 +14,157 @@
     </header>
 
     <main class="container">
-        <section class="product_filters">
-            <div class="mobile_product_filters_pannel">
-                <div class="filters_header d-flex align-items-center f-size-13">
-                    <div class="filters_heading  d-flex align-items-center">
-                        <div class="filters_header_text"><span class="text-danger">Casual style</span>,</div>
-                        <div class="filters_header_text"><span>Product type</span>,</div>
-                        <div class="filters_header_text"><span>Color</span>,</div>
-                        <div class="filters_header_text "><span class="text-danger word_end_gradient">Antipodium,</span></div>
+        <section>
+            <div class="product_filters d-flex align-items-center">
+                <div class="mobile_product_filters_pannel d-none-desktop-up">
+                    <div class="filters_header d-flex align-items-center f-size-13">
+                        <div class="filters_heading  d-flex align-items-center">
+                            <div class="filters_header_text"><span class="text-danger">Casual style</span>,</div>
+                            <div class="filters_header_text"><span>Product type</span>,</div>
+                            <div class="filters_header_text"><span>Color</span>,</div>
+                            <div class="filters_header_text "><span class="text-danger word_end_gradient">Antipodium,</span></div>
 
-                        <div class="filters_header_text d-none d-block-tablet-up"><span class="text-danger">UK 18</span>,</div>
-                        <div class="filters_header_text d-none d-block-tablet-up"><span>Price range</span></div>
+                            <div class="filters_header_text d-none d-block-tablet-up"><span class="text-danger">UK 18</span>,</div>
+                            <div class="filters_header_text d-none d-block-tablet-up"><span>Price range</span></div>
 
 
-                        <div class="filters_icon f-size-15">
-                            <span onclick="openFiltersHandler()" data-selector="filters_open">&#9660;</span>
-                            <span onclick="closeFiltersHandler()" data-selector="filters_close" class="d-none text-danger">&#10006;</span>
+                            <div class="filters_icon f-size-15">
+                                <span onclick="openFiltersHandler()" data-selector="filters_open">&#9660;</span>
+                                <span onclick="closeFiltersHandler()" data-selector="filters_close" class="d-none text-danger">&#10006;</span>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="mobile_filters d-none" data-selector="mobile_filters">
-                    <ul class="mobile_filters_list d-flex flex-wrap">
-                        <li class="filter ">
-                            <h2>Fashion</h2>
-                            <ul class="filter_items text-gray">
 
-                                <li>Not selected</li>
-                                <li>Nail the 90s</li>
-                                <li class="text-danger">Casual style</li>
-                                <li>New Look</li>
-                                <li>Sport</li>
-                                <li>Vintage</li>
-                                <li>Classical style</li>
-                            </ul>
-                        </li>
-                        <li class="filter">
-                            <h2>Product type</h2>
-                            <ul class="filter_items text-gray">
-                                <li class="text-dark">Not selected</li>
-                                <li>Coats & Jackets</li>
-                                <li>Dresses</li>
-                                <li>Jersey Tops</li>
-                            </ul>
-                        </li>
-                        <li class="filter">
-                            <h2>Color</h2>
-                            <ul class="filter_items text-gray">
-                                <li class="text-dark">Not selected</li>
-                                <li>Black</li>
-                                <li>Blue</li>
-                                <li>Red</li>
-                                <li>Green</li>
-                                <li>Golden</li>
-                            </ul>
-                        </li>
-                        <li class="filter">
-                            <h2>Brand</h2>
-                            <ul class="filter_items text-gray">
-                                <li>Not selected</li>
-                                <li>Chi cji London</li>
-                                <li class="text-danger">Antipodium</li>
-                                <li>Adidas</li>
-                                <li>New Balance</li>
-                                <li>River Island</li>
-                            </ul>
-                        </li>
-                        <li class="filter">
-                            <h2>Size</h2>
-                            <ul class="filter_items text-gray">
-                                <li>Not selected</li>
-                                <li>UK 2</li>
-                                <li class="text-danger">UK 18</li>
-                                <li>UK 18L</li>
-                                <li>UK 20</li>
-                                <li>UK 20L</li>
-                                <li>UK 20S</li>
-                                <li>UK 22S</li>
-                                <li>UK 22</li>
-                            </ul>
-                        </li>
-                        <li class="filter">
-                            <h2>Price range</h2>
-                            <ul class="filter_items text-gray">
-                                <li class="text-dark">Not selected</li>
-                                <li>To £99</li>
-                                <li>£100-£299</li>
-                                <li>From £300</li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <div class="desktop_product_filters_pannel d-none d-block-desktop-up">
+
+                    </div>
+
+
+
                 </div>
             </div>
-            <div class="desktop_product_filters_pannel d-none d-block-desktop-up"></div>
+            <div class="mobile_filters d-none" data-selector="mobile_filters">
+                <ul class="mobile_filters_list d-flex flex-wrap">
+                    <li class="filter ">
+                        <h2>Fashion</h2>
+                        <ul class="filter_items text-gray">
+
+                            <li>Not selected</li>
+                            <li>Nail the 90s</li>
+                            <li class="text-danger">Casual style</li>
+                            <li>New Look</li>
+                            <li>Sport</li>
+                            <li>Vintage</li>
+                            <li>Classical style</li>
+                        </ul>
+                    </li>
+                    <li class="filter">
+                        <h2>Product type</h2>
+                        <ul class="filter_items text-gray">
+                            <li class="text-dark">Not selected</li>
+                            <li>Coats & Jackets</li>
+                            <li>Dresses</li>
+                            <li>Jersey Tops</li>
+                        </ul>
+                    </li>
+                    <li class="filter">
+                        <h2>Color</h2>
+                        <ul class="filter_items text-gray">
+                            <li class="text-dark">Not selected</li>
+                            <li>Black</li>
+                            <li>Blue</li>
+                            <li>Red</li>
+                            <li>Green</li>
+                            <li>Golden</li>
+                        </ul>
+                    </li>
+                    <li class="filter">
+                        <h2>Brand</h2>
+                        <ul class="filter_items text-gray">
+                            <li>Not selected</li>
+                            <li>Chi cji London</li>
+                            <li class="text-danger">Antipodium</li>
+                            <li>Adidas</li>
+                            <li>New Balance</li>
+                            <li>River Island</li>
+                        </ul>
+                    </li>
+                    <li class="filter">
+                        <h2>Size</h2>
+                        <ul class="filter_items text-gray">
+                            <li>Not selected</li>
+                            <li>UK 2</li>
+                            <li class="text-danger">UK 18</li>
+                            <li>UK 18L</li>
+                            <li>UK 20</li>
+                            <li>UK 20L</li>
+                            <li>UK 20S</li>
+                            <li>UK 22S</li>
+                            <li>UK 22</li>
+                        </ul>
+                    </li>
+                    <li class="filter">
+                        <h2>Price range</h2>
+                        <ul class="filter_items text-gray">
+                            <li class="text-dark">Not selected</li>
+                            <li>To £99</li>
+                            <li>£100-£299</li>
+                            <li>From £300</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
         </section>
 
 
         <section class="products d-flex justify-around">
             <div class="product_item">
-                <span class="product_item_promo">New</span>
-                <img src="img/photo2.jpg" alt="Only Skinny Jeans">
+                <div class="product_item_img pos-relative">
+                    <span class="product_item_promo">New</span>
+                    <img src="img/photo2.jpg" alt="Only Skinny Jeans">
+                    <div class="item_hover d-none">
+                        <a href="#" class="item_hover_link">View item</a>
+                    </div>
+                </div>
                 <div class="product_info d-flex flex-direction-column text-center f-size-14-tablet">
                     <a href="#" class="product_name">Only Skinny Jeans</a>
                     <span class="product_price">£66.50</span>
                 </div>
             </div>
             <div class="product_item">
-                <span class="product_item_promo">New</span>
-                <img src="img/photo5.jpg" alt="Neck Knitted Jumper">
+                <div class="product_item_img pos-relative">
+                    <span class="product_item_promo">New</span>
+                    <img src="img/photo5.jpg" alt="Neck Knitted Jumper">
+                    <div class="item_hover d-none">
+                        <a href="#" class="item_hover_link">View item</a>
+                    </div>
+                </div>
                 <div class="product_info d-flex flex-direction-column text-center f-size-14-tablet">
                     <a href="#" class="product_name">Neck Knitted Jumper</a>
                     <span class="product_price">£76.25</span>
                 </div>
             </div>
             <div class="product_item d-none d-block-tablet-up">
-                <img src="img/photo6.jpg" alt="Turtle Neck Jumper">
+                <div class="product_item_img pos-relative">
+                    <img src="img/photo6.jpg" alt="Turtle Neck Jumper">
+                    <div class="item_hover d-none">
+                        <a href="#" class="item_hover_link">View item</a>
+                    </div>
+                </div>
                 <div class="product_info d-flex flex-direction-column text-center f-size-14-tablet">
                     <a href="#" class="product_name">Turtle Neck Jumper in RiB</a>
                     <span class="product_price">£130.25</span>
                 </div>
             </div>
             <div class="product_item d-none d-block-desktop-up">
-                <img src="img/photo_6.jpg" alt="With Patchwork Crochet">
+                <div class="product_item_img pos-relative">
+                    <img src="img/photo_6.jpg" alt="With Patchwork Crochet">
+                    <div class="item_hover d-none">
+                        <a href="#" class="item_hover_link">View item</a>
+                    </div>
+                </div>
                 <div class="product_info d-flex flex-direction-column text-center f-size-14-tablet">
                     <a href="#" class="product_name">With Patchwork Crochet</a>
                     <span class="product_price">£80.60</span>
@@ -153,28 +182,48 @@
             </div>
             <div class="products flex-wrap d-flex direction-row-tablet-up justify-around">
                 <div class="product_item d-none-tablet-up">
-                    <img src="img/photo6.jpg" alt="Turtle Neck Jumper">
+                    <div class="product_item_img pos-relative">
+                        <img src="img/photo6.jpg" alt="Turtle Neck Jumper">
+                        <div class="item_hover d-none">
+                            <a href="#" class="item_hover_link">View item</a>
+                        </div>
+                    </div>
                     <div class="product_info d-flex flex-direction-column text-center f-size-14-tablet">
                         <a href="#" class="product_name">Turtle Neck Jumper in RiB</a>
                         <span class="product_price">£130.25</span>
                     </div>
                 </div>
                 <div class="product_item d-none-desktop-up">
-                    <img src="img/photo_6.jpg" alt="With Patchwork Crochet">
+                    <div class="product_item_img pos-relative">
+                        <img src="img/photo_6.jpg" alt="With Patchwork Crochet">
+                        <div class="item_hover d-none">
+                            <a href="#" class="item_hover_link">View item</a>
+                        </div>
+                    </div>
                     <div class="product_info d-flex flex-direction-column text-center f-size-14-tablet">
                         <a href="#" class="product_name">With Patchwork Crochet</a>
                         <span class="product_price">£80.60</span>
                     </div>
                 </div>
                 <div class="product_item">
-                    <img src="img/photo3.jpg" alt="Levi's Jeans">
+                    <div class="product_item_img pos-relative">
+                        <img src="img/photo3.jpg" alt="Levi's Jeans">
+                        <div class="item_hover d-none">
+                            <a href="#" class="item_hover_link">View item</a>
+                        </div>
+                    </div>
                     <div class="product_info d-flex flex-direction-column text-center f-size-14-tablet">
                         <a href="#" class="product_name">Levi's Jeans for women</a>
                         <span class="product_price">£95.50</span>
                     </div>
                 </div>
                 <div class="product_item">
-                    <img src="img/photo7.jpg" alt="Boyfriend T-Shirt">
+                    <div class="product_item_img pos-relative">
+                        <img src="img/photo7.jpg" alt="Boyfriend T-Shirt">
+                        <div class="item_hover d-none">
+                            <a href="#" class="item_hover_link">View item</a>
+                        </div>
+                    </div>
                     <div class="product_info d-flex flex-direction-column text-center f-size-14-tablet">
                         <a href="#" class="product_name">Boyfriend T-Shirt with Bohemian Print</a>
                         <div class="discount_amounts_catalog">
@@ -186,42 +235,72 @@
                     </div>
                 </div>
                 <div class="product_item">
-                    <img src="img/photo8.jpg" alt="Colour Block">
+                    <div class="product_item_img pos-relative">
+                        <img src="img/photo8.jpg" alt="Colour Block">
+                        <div class="item_hover d-none">
+                            <a href="#" class="item_hover_link">View item</a>
+                        </div>
+                    </div>
                     <div class="product_info d-flex flex-direction-column text-center f-size-14-tablet">
                         <a href="#" class="product_name">Colour Block</a>
                         <span class="product_price">£550.50</span>
                     </div>
                 </div>
                 <div class="product_item">
-                    <img src="img/photo9.jpg" alt="Monki Festval Knitted">
+                    <div class="product_item_img pos-relative">
+                        <img src="img/photo9.jpg" alt="Monki Festval Knitted">
+                        <div class="item_hover d-none">
+                            <a href="#" class="item_hover_link">View item</a>
+                        </div>
+                    </div>
                     <div class="product_info d-flex flex-direction-column text-center f-size-14-tablet">
                         <a href="#" class="product_name">Monki Festval Knitted</a>
                         <span class="product_price">£24.75</span>
                     </div>
                 </div>
                 <div class="product_item d-none d-block-tablet-up">
-                    <img src="img/photo11.jpg" alt="Oversized Cardigan">
+                    <div class="product_item_img pos-relative">
+                        <img src="img/photo11.jpg" alt="Oversized Cardigan">
+                        <div class="item_hover d-none">
+                            <a href="#" class="item_hover_link">View item</a>
+                        </div>
+                    </div>
                     <div class="product_info d-flex flex-direction-column text-center f-size-14-tablet">
                         <a href="#" class="product_name">Oversized Cardigan</a>
                         <span class="product_price">£90.00</span>
                     </div>
                 </div>
                 <div class="product_item d-none d-block-tablet-up">
-                    <img src="img/photo10.jpg" alt="Paul & Joe Sister Jumper">
+                    <div class="product_item_img pos-relative">
+                        <img src="img/photo10.jpg" alt="Paul & Joe Sister Jumper">
+                        <div class="item_hover d-none">
+                            <a href="#" class="item_hover_link">View item</a>
+                        </div>
+                    </div>
                     <div class="product_info d-flex flex-direction-column text-center f-size-14-tablet">
                         <a href="#" class="product_name">Paul & Joe Sister Jumper with Neon Trims</a>
                         <span class="product_price">£19.75</span>
                     </div>
                 </div>
                 <div class="product_item d-none d-block-tablet-up">
-                    <img src="img/photo12.jpg" alt="Only Busted Knee Jean">
+                    <div class="product_item_img pos-relative">
+                        <img src="img/photo12.jpg" alt="Only Busted Knee Jean">
+                        <div class="item_hover d-none">
+                            <a href="#" class="item_hover_link">View item</a>
+                        </div>
+                    </div>
                     <div class="product_info d-flex flex-direction-column text-center f-size-14-tablet">
                         <a href="#" class="product_name">Only Busted Knee Jean</a>
                         <span class="product_price">£140.50</span>
                     </div>
                 </div>
                 <div class="product_item d-none d-block-tablet-up">
-                    <img src="img/photo13.jpg" alt="Boyfriend T-Shirt">
+                    <div class="product_item_img pos-relative">
+                        <img src="img/photo13.jpg" alt="Boyfriend T-Shirt">
+                        <div class="item_hover d-none">
+                            <a href="#" class="item_hover_link">View item</a>
+                        </div>
+                    </div>
                     <div class="product_info d-flex flex-direction-column text-center f-size-14-tablet">
                         <a href="#" class="product_name">Boyfriend T-Shirt with Paris Print</a>
                         <span class="product_price">£85.75</span>
@@ -264,72 +343,11 @@
         </div>
     </section>
 
-    <footer class="footer d-flex flex-direction-column">
-        <div class="site_map d-flex flex-direction-column">
-            <div class="footer_info d-flex justify-between">
-                <div class="footer_left">
-                    <h4 class="footer_text f-size-14 f-size-16-tablet">Quick Links</h4>
-                    <ul class="footer_nav f-size-14-desktop">
-                        <li><a href="#" class="footer_link">Store locator</a></li>
-                        <li><a href="#" class="footer_link">Gift cards</a></li>
-                        <li><a href="#" class="footer_link">Size guide</a></li>
-                        <li><a href="#" class="footer_link">About us</a></li>
-                        <li><a href="#" class="footer_link">Support</a></li>
-                    </ul>
-                </div>
-                <div class="footer_right">
-                    <div class="footer_text f-size-14 f-size-16-tablet">
-                        <h4>Customer care</h4>
-                    </div>
-                    <ul class="footer_nav f-size-14-desktop">
-                        <li><a href="#" class="footer_link">Customer service</a></li>
-                        <li><a href="#" class="footer_link">Track my order</a></li>
-                        <li><a href="#" class="footer_link">Return policy</a></li>
-                        <li><a href="#" class="footer_link">Shipping & delivery</a></li>
-                        <li><a href="#" class="footer_link">Contact us</a></li>
-                        <li><a href="#" class="footer_link">Careers</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer_adress d-flex justify-between">
-                <div class="footer_questions">
-                    <h3 class="footer_text f-size-14 f-size-16-tablet">Questions</h3>
-                    <img src="img/twi_ico.jpg" class="footer_img">
-                    <span class="footer_tweet f-size-14-desktop">Tweet us @<b>template</b></span>
-                </div>
-                <div class="footer_contact">
-                    <h3 class="footer_text f-size-14 f-size-16-tablet">Order by fhone</h3>
-                    <span>8-800-409-47-12</span>
-                </div>
-                <div class="text d-none f-size-16-desktop">
-                    <p><i>We have our own delivery service which operates in 23 major European cities. Delivery time - 3-5 days. </i></p>
-                </div>
-            </div>
-
-
-        </div>
-        <div class="footer_bottom">
-            <div class="policy_and_copyRights f-size-10">
-                <span class="bottom">Legal notice</span>
-                <span class="bottom">Privacy police</span>
-                <span class="bottom">Site map</span>
-            </div>
-            <div class="footer_end">
-                <div class="footer_copy"><small>&copy; 2010-2015, The Template Group inc.</small></div>
-                <div class="footer_share f-size-14">
-                    <span class="share">Share</span>
-                    <span class="share_num">1 437</span>
-                </div>
-            </div>
-        </div>
-        <div class="footer_icon">
-            <img src="img/fb.jpg" alt="fb" class="fb">
-            <img src="img/twi.jpg" alt="twitter" class="twitter">
-        </div>
+    <footer class="footer d-flex flex-direction-column" data-selector="footer">
     </footer>
 
     <script src="js/headerComponent.js"></script>
+    <script src="js/footerComponent.js"></script>
     <script src="js/catalog.js"></script>
     <script src="js/app.js" async="false"></script>
 </body>
