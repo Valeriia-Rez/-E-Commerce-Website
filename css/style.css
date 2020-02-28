@@ -495,6 +495,7 @@ button {
     width: 50%;
     position: relative;
     cursor: pointer;
+    padding-bottom: 24px;
 }
 
 .product_item.multi:before {
@@ -539,11 +540,10 @@ button {
 
 .product_info {
     line-height: 24px;
-    padding-bottom: 20%;
 }
 
 .product_name {
-    padding-top: 10%;
+    padding-top: 14px;
 }
 
 .plus {
@@ -1264,6 +1264,10 @@ button {
     }
     .item_property {
         align-items: inherit;
+    }
+    /*Shopping Bag Items*/
+    .product_item.shopping_bag_item .product_item_img img {
+        height: 340px;
     }
     /*Footer*/
     .footer_info {
