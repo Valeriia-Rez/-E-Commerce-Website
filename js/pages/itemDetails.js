@@ -1,4 +1,6 @@
-const productItemWrapper = document.querySelector("[data-selector='product_item']");
+const storage = new Storage();
+
+const productItemWrapper = document.querySelector("[data-selector='product_item_section']");
 
 
 const getProductPhotos = product => product.preview.map(productPhoto =>
@@ -13,6 +15,29 @@ const getProductsColors = product => product.colors.map(productColors =>
     ` <input type="radio" name="color" class="item_btn" type="submit" id="${productColors}" value="${productColors}" />
     <label for="${productColors}">${productColors}</label>`);
 
+const addToBagHandler = (e) => {
+    e.preventDefault();
+    const arrayOfSizes = Array.from(e.target.size);
+    const selectedSize = arrayOfSizes.find(item => item.checked);
+    const selectedSizesValue = selectedSize && selectedSize.value;
+    const arrayOfColors = Array.from(e.target.color);
+    const selectedColor = arrayOfColors.find(item => item.checked);
+    const selectedColorValue = selectedColor && selectedColor.value;
+    const addedProductId = e.target.productId.value;
+    const addedProduct = window.catalog.find(product => product.id === addedProductId);
+    const finalProductPrice = addedProduct.price !== addedProduct.discountedPrice && addedProduct.discountedPrice ? addedProduct.discountedPrice : addedProduct.price;
+    const addToShoppingBagProduct = {
+        ...addedProduct,
+        selectedSize: selectedSizesValue,
+        selectedColor: selectedColorValue,
+        quantity: 1,
+        finalProductPrice
+    }
+
+    storage.storeToShoppingCart(addToShoppingBagProduct);
+
+}
+
 const renderProductItem = () => {
     const allProducts = window.catalog;
     const productItemData = allProducts.find(product => product.id === "80d32566-d81c-4ba0-9edf-0eceda3b4360");
@@ -20,6 +45,7 @@ const renderProductItem = () => {
     const sizes = getProductsSizes(productItemData);
     const colors = getProductsColors(productItemData);
     let productHTML = `
+    <div class="item_section d-flex flex-direction-column">
         <div class="items d-flex flex-direction-column">
             <div class="item_primary">
                 <img src="${productItemData.thumbnail}" alt="${productItemData.title}" class="item_primary_image">
@@ -40,6 +66,8 @@ const renderProductItem = () => {
                 <p><i>${productItemData.description}</i></p>
             </div>
         </div>
+        <form data-selector="add_to_bag">
+        <input type="hidden" value="${productItemData.id}" name="productId"/>
             <div class="item_property d-flex  flex-direction-column f-size-14">
                 <div class="item_size d-flex align-items-center justify-between">
                     <div class="item_description">Size</div>
@@ -55,10 +83,14 @@ const renderProductItem = () => {
                 </div>
             </div>
             <div class="button_wrapper text-center">
-                <button class="btn f-size-20 f-size-24-desktop" type="button">Add to bag</button>
+                <button type="submit" data-id="${productItemData.id}" class="btn f-size-20 f-size-24-desktop" type="button">Add to bag</button>
             </div>
+        </form>
+     </div>
              `;
     productItemWrapper.innerHTML = productHTML;
+    const addToBagForm = document.querySelector("[data-selector='add_to_bag']");
+    addToBagForm.addEventListener("submit", addToBagHandler);
 }
 
 window.addEventListener("DOMContentLoaded", renderProductItem);
