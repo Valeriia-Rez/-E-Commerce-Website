@@ -94,8 +94,8 @@ window.catalog = [{
     fashion: 'Classical style',
     colors: ['Black', 'Blue'],
     sizes: ['UK 52', 'UK 54', 'UK 56'],
-    thumbnail: 'img/thumb_0.jpg', // replace with image extracted from item layout
-    preview: ['full image path 1', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
+    thumbnail: 'img/full.jpg', // replace with image extracted from item layout
+    preview: ['img/thumb_0.jpg', 'img/thumb_1.jpg', 'img/thumb_2.jpg'] // replace with paths to images extracted from item layout
 }, {
     id: '8b300772-eee3-4ff1-b091-e89f17e0e469',
     dateAdded: '2017-08-10T14:59:00.000Z',

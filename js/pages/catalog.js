@@ -51,7 +51,7 @@ const renderProducts = (products, productCounts, element1, element2) => {
                     <span class="item_hover_link">View item</span>
                 </div>
             </div>
-            <div class="product_info d-flex flex-direction-column text-center f-size-14-tablet">
+            <div class="product_info d-flex flex-direction-column text-center text-dark f-size-14-tablet">
                 <span class="product_name">${item.title}</span>
                 ${item.discountedPrice && item.discountedPrice !== item.price  ? 
                 `<div class="discount_amounts_catalog">
@@ -64,6 +64,7 @@ const renderProducts = (products, productCounts, element1, element2) => {
             </div>
         </a>
     `;
+    
     const productItem = document.createElement("div");
     productItem.className = "product_item";
     productItem.innerHTML = product;
