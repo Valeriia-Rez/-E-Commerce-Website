@@ -237,6 +237,7 @@ button {
     background-color: transparent;
     outline: none;
     cursor: pointer;
+    font-family: var(--font-primary);
 }
 
 .btn {
@@ -250,6 +251,7 @@ button {
 .btn_link {
     padding: 15px 0;
     border: none;
+    font-weight: var(--fontWeight);
 }
 
 
@@ -827,11 +829,23 @@ button {
     .f-size-22-tablet {
         font-size: 22px;
     }
+    .f-size-20-tablet {
+        font-size: 20px;
+    }
     .f-size-16-tablet {
         font-size: 16px;
     }
     .f-size-14-tablet {
         font-size: 14px;
+    }
+    .f-size-13-tablet {
+        font-size: 13px;
+    }
+    .f-size-12-tablet {
+        font-size: 12px;
+    }
+    .f-size-11-tablet {
+        font-size: 11px;
     }
     /*Header*/
     .header_wrapper {
@@ -1080,6 +1094,9 @@ button {
     }
     .f-size-24-desktop {
         font-size: 24px;
+    }
+    .f-size-22-desktop {
+        font-size: 22px;
     }
     .f-size-16-desktop {
         font-size: 16px;
