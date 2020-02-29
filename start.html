@@ -4,57 +4,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-
-    <title>E_Commerce Website</title>
+    <title>E_Commerce Homepage</title>
 </head>
 
 <body>
 
     <header class="container header_wrapper" data-selector="header">
     </header>
+
     <div class="banner">
         <hr class="dividerLine">
         <div class="promo_banners">
+
             <div class="promo_banner">
-                <span class="banner_text f-size-22 f-size-28-desktop">Nike Red</span>
-                <img src="img/photo.jpg" alt="nike_trainers" class="banner_img">
+                <a href="item.html" class="text-dark">
+                    <span class="banner_text f-size-22 f-size-28-desktop">Nike Red</span>
+                    <img src="img/photo.jpg" alt="nike_trainers" class="banner_img">
+                </a>
             </div>
             <div class="promo_banner d-none d-block-tablet-up">
-                <div class="banner_text text-center f-size-22 f-size-28-desktop">
-                    <span>Caps & Hats</span>
-                    <br>
-                    <span class="banner_sale text-gray f-size-16"><i>Sale -50%</i></span>
-                </div>
-                <img src="img/fon1.jpg" alt="cats&hats" class="banner_img">
+                <a href="catalog.html" class="text-dark">
+                    <div class="banner_text text-center f-size-22 f-size-28-desktop">
+                        <span>Caps & Hats</span>
+                        <br>
+                        <span class="banner_sale text-gray f-size-16"><i>Sale -50%</i></span>
+                    </div>
+                    <img src="img/fon1.jpg" alt="cats&hats" class="banner_img">
             </div>
+            </a>
         </div>
         <hr class="dividerLine">
     </div>
 
     <main class="container">
+        <h1 class="d-none">Homepage</h1>
         <section class="products_section">
             <div class="products_header text-center">
-                <a href="#" class="products_title f-size-26 f-size-40 f-size-50-desktop d-block">Best offer</a>
+                <h2 class="products_title f-size-26 f-size-40 f-size-50-desktop d-block">Best offer</h2>
                 <p class="info_block f-size-14 f-size-16-tablet"><i>This offer is valid in-store and online. Prices displayed reflect this additional discount. This offer ends at 11:59 GMT on March 1st 2019</i></p>
             </div>
             <div class="products d-flex flex-direction-column direction-row-tablet-up justify-between">
                 <div class="product_items d-flex justify-around">
                     <div class="product_item multi">
-                        <span class="product_item_promo">New</span>
-                        <img src="img/photo2.jpg" alt="Skinny Jeans">
-                        <div class="product_info d-flex flex-direction-column text-center f-size-14-tablet">
-                            <a href="#" class="product_name">Only Skinny Jeans</a>
-                            <span class="product_price">£66.50</span>
-                        </div>
+                        <a href="item.html" class="product_item_link">
+                            <span class="product_item_promo">New</span>
+                            <img src="img/photo2.jpg" alt="Skinny Jeans">
+                            <div class="product_info d-flex flex-direction-column text-center f-size-14-tablet">
+                                <span class="product_name">Only Skinny Jeans</span>
+                                <span class="product_price">£66.50</span>
+                            </div>
+                        </a>
                     </div>
                     <span class="plus d-block f-size-26">+</span>
                     <div class="product_item multi">
-                        <img src="img/photo3.jpg" alt="Levi's Jeans">
-                        <div class="product_info d-flex flex-direction-column text-center f-size-14-tablet">
-                            <a href="#" class="product_name">Levi's Jeans for women</a>
-                            <span class="product_price">£95.50</span>
-                        </div>
+                        <a href="item.html" class="product_item_link">
+                            <img src="img/photo3.jpg" alt="Levi's Jeans">
+                            <div class="product_info d-flex flex-direction-column text-center f-size-14-tablet">
+                                <span class="product_name">Levi's Jeans for women</span>
+                                <span class="product_price">£95.50</span>
+                            </div>
+                        </a>
                     </div>
                 </div>
 
@@ -82,53 +93,61 @@
 
         <section class="products_section">
             <div class="products_header_arrivals text-center">
-                <h1><a href="#" class="products_title d-block f-size-26 f-size-40 f-size-50-desktop">New arrivals</a></h1>
+                <h2 class="products_title d-block f-size-26 f-size-40 f-size-50-desktop">New arrivals</h2>
             </div>
-            <div class="products d-flex justify-around">
-                <div class="product_item">
-                    <span class="product_item_promo">New</span>
-                    <img src="img/photo2.jpg" alt="Skinny Jeans">
-                    <div class="product_info d-flex flex-direction-column text-center f-size-14-tablet">
-                        <a href="#" class="product_name">Only Skinny Jeans</a>
-                        <span class="product_price">£66.50</span>
-                    </div>
+            <div class=" products d-flex justify-around ">
+                <div class="product_item ">
+                    <a href="item.html " class="product_item_link ">
+                        <span class="product_item_promo ">New</span>
+                        <img src="img/photo2.jpg " alt="Skinny Jeans ">
+                        <div class="product_info d-flex flex-direction-column text-center f-size-14-tablet ">
+                            <span class="product_name ">Only Skinny Jeans</span>
+                            <span class="product_price ">£66.50</span>
+                        </div>
+                    </a>
                 </div>
-                <div class="product_item">
-                    <span class="product_item_promo">New</span>
-                    <img src="img/photo5.jpg" alt="Neck Knitted Jumper">
-                    <div class="product_info d-flex flex-direction-column text-center f-size-14-tablet">
-                        <a href="#" class="product_name">Neck Knitted Jumper</a>
-                        <span class="product_price">£76.25</span>
-                    </div>
+                <div class="product_item ">
+                    <a href="item.html " class="product_item_link ">
+                        <span class="product_item_promo ">New</span>
+                        <img src="img/photo5.jpg " alt="Neck Knitted Jumper ">
+                        <div class="product_info d-flex flex-direction-column text-center f-size-14-tablet ">
+                            <span class="product_name ">Neck Knitted Jumper</span>
+                            <span class="product_price ">£76.25</span>
+                        </div>
+                    </a>
                 </div>
-                <div class="product_item d-none d-block-tablet-up">
-                    <img src="img/photo6.jpg" alt="Turtle Neck Jumper">
-                    <div class="product_info d-flex flex-direction-column text-center f-size-14-tablet">
-                        <a href="#" class="product_name">Turtle Neck Jumper in RiB</a>
-                        <span class="product_price">£130.25</span>
-                    </div>
+                <div class="product_item d-none d-block-tablet-up ">
+                    <a href="item.html " class="product_item_link ">
+                        <img src="img/photo6.jpg " alt="Turtle Neck Jumper ">
+                        <div class="product_info d-flex flex-direction-column text-center f-size-14-tablet ">
+                            <span class="product_name ">Turtle Neck Jumper in RiB</span>
+                            <span class="product_price ">£130.25</span>
+                        </div>
+                    </a>
                 </div>
-                <div class="product_item d-none d-block-desktop-up">
-                    <img src="img/photo_6.jpg" alt="With Patchwork Crochet">
-                    <div class="product_info d-flex flex-direction-column text-center f-size-14-tablet">
-                        <a href="#" class="product_name">With Patchwork Crochet</a>
-                        <span class="product_price">£80.60</span>
-                    </div>
+                <div class="product_item d-none d-block-desktop-up ">
+                    <a href="item.html " class="product_item_link ">
+                        <img src="img/photo_6.jpg " alt="With Patchwork Crochet ">
+                        <div class="product_info d-flex flex-direction-column text-center f-size-14-tablet ">
+                            <span class="product_name ">With Patchwork Crochet</span>
+                            <span class="product_price ">£80.60</span>
+                        </div>
+                    </a>
                 </div>
             </div>
-            <div class="button_wrapper text-center">
-                <button class="btn f-size-20" type="button">All arrivals</button>
+            <div class="button_wrapper text-center ">
+                <a href="catalog.html" class="btn f-size-20 ">All arrivals</a>
             </div>
             </div>
         </section>
 
 
-        <footer class="footer d-flex flex-direction-column" data-selector="footer">
+        <footer class="footer d-flex flex-direction-column " data-selector="footer ">
         </footer>
 
-        <script src="js/headerComponent.js"></script>
-        <script src="js/footerComponent.js"></script>
-        <script src="js/app.js" async="false"></script>
+        <script src="js/components/headerComponent.js "></script>
+        <script src="js/components/footerComponent.js "></script>
+        <script src="js/app.js " async="false "></script>
 </body>
 
 </html>

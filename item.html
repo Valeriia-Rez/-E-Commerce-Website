@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>E_Commerce Website</title>
+    <title>E_Commerce Item Details</title>
 </head>
 
 <body>
@@ -14,10 +15,12 @@
     </header>
 
     <main class="container">
+        <h1 class="d-none">Item Details</h1>
         <section class="product_header">
             <div class="product_header_pannel d-flex align-items-center f-size-16-tablet">
-                <span class="pr-3">&#60;</span>
-                <h4 class="product_header_heading f-size-18">Back to catalog</h4>
+                <a href="catalog.html">
+                    <p class="product_header_heading f-size-18"><span class="pr-3">&#60;</span>Back to catalog</p>
+                </a>
             </div>
         </section>
 
@@ -35,7 +38,7 @@
             </div>
             <div class="item_info text-center">
                 <div class="item_text f-size-20 f-size-26-desktop">
-                    <h1>Dark classic fit suit</h1>
+                    <h2>Dark classic fit suit</h2>
                 </div>
                 <div class="item_block d-flex flex-direction-column">
                     <div class="item_price f-size-18 f-size-25-desktop">
@@ -112,8 +115,8 @@
     <footer class="footer d-flex flex-direction-column" data-selector="footer">
     </footer>
 
-    <script src="js/headerComponent.js"></script>
-    <script src="js/footerComponent.js"></script>
+    <script src="js/components/headerComponent.js"></script>
+    <script src="js/components/footerComponent.js"></script>
     <script src="js/app.js" async="false"></script>
 
 </body>

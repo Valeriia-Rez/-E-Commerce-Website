@@ -226,6 +226,16 @@ body {
     margin-bottom: 24px;
 }
 
+a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+a:hover,
+a:active {
+    color: var(--danger-color);
+}
+
 button {
     -webkit-appearance: btn;
 }
@@ -464,12 +474,14 @@ button {
 }
 
 .products_title,
-.product_name {
+.product_name,
+.product_item_link {
     text-decoration: none;
 }
 
 .products_title,
-.product_name {
+.product_name,
+.product_item_link {
     color: var(--main-color);
 }
 
@@ -1127,10 +1139,6 @@ button {
         width: 116px;
         max-width: 116px;
     }
-    .header_nav:hover,
-    .header_nav:active {
-        color: var(--danger-color);
-    }
     /*Desktop Filter*/
     .desktop_product_filters_pannel,
     .desktop_filter_items {
@@ -1168,7 +1176,9 @@ button {
         list-style-type: none;
         cursor: pointer;
     }
-    .desktop_filter_items li:hover {
+    .desktop_filter_items li:hover,
+    .desktop_filter_items li:focus,
+    .desktop_filter_items li:active {
         color: var(--danger-color);
         background-color: var(--lightGray-color);
     }
