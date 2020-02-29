@@ -4,38 +4,49 @@ const productItemWrapper = document.querySelector("[data-selector='product_item_
 
 
 const getProductPhotos = product => product.preview.map(productPhoto =>
+
     `<img src="${productPhoto}" alt="${product.title}" class="item_secondary_image">`
 );
 
-const getProductsSizes = product => product.sizes.map(productSize =>
-    ` <input type="radio" name="size" class="item_btn" id="${productSize.replace(/\s+/g, '')}" value="${productSize}" />
-    <label for="${productSize.replace(/\s+/g, '')}">${productSize}</label>`);
+const getProductsSizes = product => product.sizes.map((productSize, index) => {
+    const checkedByDefault = index === 0 ? "checked" : "";
+    return (` <input type="radio" ${checkedByDefault} name="size" class="item_btn" id="${productSize.replace(/\s+/g, '')}" value="${productSize}" />
+    <label for="${productSize.replace(/\s+/g, '')}">${productSize}</label>`)
+});
 
-const getProductsColors = product => product.colors.map(productColors =>
-    ` <input type="radio" name="color" class="item_btn" type="submit" id="${productColors}" value="${productColors}" />
-    <label for="${productColors}">${productColors}</label>`);
+const getProductsColors = product => product.colors.map((productColors, index) => {
+    const checkedByDefault = index === 0 ? "checked" : "";
+    return (` <input type="radio" ${checkedByDefault} name="color" class="item_btn" type="submit" id="${productColors}" value="${productColors}" />
+    <label for="${productColors}">${productColors}</label>`)
+});
 
-const addToBagHandler = (e) => {
-    e.preventDefault();
-    const arrayOfSizes = Array.from(e.target.size);
+const getSelectedSizeAndColor = (inputElement) => {
+    const arrayOfSizes = Array.from(inputElement.size);
     const selectedSize = arrayOfSizes.find(item => item.checked);
     const selectedSizesValue = selectedSize && selectedSize.value;
-    const arrayOfColors = Array.from(e.target.color);
+    const arrayOfColors = Array.from(inputElement.color);
     const selectedColor = arrayOfColors.find(item => item.checked);
     const selectedColorValue = selectedColor && selectedColor.value;
+    return {
+        size: selectedSizesValue,
+        color: selectedColorValue
+    }
+}
+const addToBagHandler = (e) => {
+    e.preventDefault();
+    const selectedSizeAndColor = getSelectedSizeAndColor(e.target);
+    const { size, color } = selectedSizeAndColor;
     const addedProductId = e.target.productId.value;
     const addedProduct = window.catalog.find(product => product.id === addedProductId);
     const finalProductPrice = addedProduct.price !== addedProduct.discountedPrice && addedProduct.discountedPrice ? addedProduct.discountedPrice : addedProduct.price;
     const addToShoppingBagProduct = {
         ...addedProduct,
-        selectedSize: selectedSizesValue,
-        selectedColor: selectedColorValue,
+        selectedSize: size,
+        selectedColor: color,
         quantity: 1,
         finalProductPrice
     }
-
     storage.storeToShoppingCart(addToShoppingBagProduct);
-
 }
 
 const renderProductItem = () => {
