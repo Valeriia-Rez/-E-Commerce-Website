@@ -87,7 +87,7 @@ window.catalog = [{
     dateAdded: '2017-01-01T13:26:14.000Z',
     title: 'Dark classic fit suit',
     description: 'Featuring fine Italian wool, this elegant suit has pick-stitch edging, cascade buttons at the cuffs',
-    discountedPrice: 150.0,
+    discountedPrice: 180.6,
     price: 180.6,
     hasNew: false,
     category: 'men',

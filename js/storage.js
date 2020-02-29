@@ -10,15 +10,11 @@ class Storage {
 
             localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart));
         } else {
-            shoppingCart = JSON.parse(localStorage.getItem('shoppingCart'));
-            shoppingCart.items.push(product);
-            shoppingCart.itemsCount += 1;
-            shoppingCart.totalCost += product.finalProductPrice;
-            localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart));
+            this.updateShoppingCart(product);
         }
     }
 
-    getShoppingCartFromStorage() {
+    getShoppingCart() {
         let shoppingCart;
         if (localStorage.getItem('shoppingCart') === null) {
             shoppingCart = {};
@@ -28,18 +24,27 @@ class Storage {
         return shoppingCart;
     }
 
-    updateShoppingCartStorage(updatedItem) {
+    updateShoppingCart(product) {
         let shoppingCart = JSON.parse(localStorage.getItem('shoppingCart'));
-
-        shoppingCart.items.forEach(function(item, index) {
-            if (updatedItem.id === item.id) {
-                shoppingCart.items.splice(index, 1, updatedItem);
-            }
+        const sameItem = shoppingCart.items.find(item => {
+            return item.id === product.id && item.selectedColor === product.selectedColor && item.selectedSize === product.selectedSize
         });
+
+        if (sameItem) {
+            const sameItemIndex = shoppingCart.items.findIndex(item => {
+                return item.id === product.id && item.selectedColor === product.selectedColor && item.selectedSize === product.selectedSize
+            });
+            shoppingCart.items.splice(sameItemIndex, 1, {...sameItem, quantity: sameItem.quantity + 1 });
+        } else {
+            shoppingCart.items.push(product);
+        }
+
+        shoppingCart.itemsCount += 1;
+        shoppingCart.totalCost += product.finalProductPrice;
         localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart));
     }
 
-    deleteShoppingCartFromStorage(id) {
+    deleteShoppingCart(id) {
         let shoppingCart = JSON.parse(localStorage.getItem('shoppingCart'));
 
         shoppingCart.items.forEach(function(item, index) {
@@ -50,11 +55,7 @@ class Storage {
         localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart));
     }
 
-    clearShoppingCartFromStorage() {
+    clearShoppingCart() {
         localStorage.removeItem('shoppingCart');
-    }
-
-    storeShoppingCart(shoppingCart) {
-        localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart));
     }
 }
