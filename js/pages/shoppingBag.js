@@ -9,11 +9,8 @@ const increaseQuantity = () => {
         quantity: item.quantity + 1
     }
     storage.storeToShoppingCart(updatedItem);
-
-
     renderHeaderComponent();
     renderShoppingBagItems();
-
 }
 
 const decreaseQuantity = () => {
@@ -39,7 +36,7 @@ const renderShoppingBagItems = () => {
 
     const { items, totalCost } = storage.getShoppingCart();
     const shoppingBagItems = document.querySelector("[data-selector='shopping_bag_items']");
-    console.log(items);
+
     shoppingBagItems.innerHTML = items ? items.map(item => (`
     
         <div class="product_item shopping_bag_item d-flex flex-direction-row mb-2">
@@ -58,7 +55,10 @@ const renderShoppingBagItems = () => {
             <div class="product_details mt-2 f-size-10 f-size-12-tablet">
                 <p>Color: ${item.selectedColor}</p>
                 <p>Size: ${item.selectedSize}</p>
-                <p>Quantity: <button data-id="${item.storageId}" data-selector="decrease_quantity_button" onclick="decreaseQuantity()" class="btn_link text-danger"><strong>&#8722;</strong></button>${item.quantity}<button data-id="${item.storageId}" data-selector="increase_quantity_button" onclick="increaseQuantity()" class="btn_link text-danger"><strong>+</strong></button></p>
+                <p>Quantity:
+                 <button data-id="${item.storageId}" data-selector="decrease_quantity_button" onclick="decreaseQuantity()" class="btn_link text-danger"><strong>&#8722;</strong></button>
+                 ${item.quantity}
+                 <button data-id="${item.storageId}" data-selector="increase_quantity_button" onclick="increaseQuantity()" class="btn_link text-danger"><strong>+</strong></button></p>
             </div>
             <button class="btn_link text-danger f-size-11 f-size-13-tablet">Remove item</button>
         </div>

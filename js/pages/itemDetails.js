@@ -37,14 +37,14 @@ const addToBagHandler = (e) => {
     const { size, color } = selectedSizeAndColor;
     const addedProduct = window.catalog.find(product => product.id === addedProductId);
     const finalProductPrice = addedProduct.price !== addedProduct.discountedPrice && addedProduct.discountedPrice ? addedProduct.discountedPrice : addedProduct.price;
-
     const { items } = storage.getShoppingCart();
-    console.log(items);
-    const isSameItem = items && items.find(item => item.id === addedProductId);
-    console.log(isSameItem);
+    const isSameItem = items && items.find(item => item.id === addedProductId && item.selectedColor === color && item.selectedSize === size);
     let addToShoppingBagProduct;
     if (isSameItem) {
-
+        addToShoppingBagProduct = {
+            ...isSameItem,
+            quantity: isSameItem.quantity + 1
+        }
     } else {
         addToShoppingBagProduct = {
             ...addedProduct,
@@ -58,7 +58,7 @@ const addToBagHandler = (e) => {
 
     storage.storeToShoppingCart(addToShoppingBagProduct);
     renderHeaderComponent();
-    /* window.location.pathname = "/shopping-bag.html";*/
+    window.location.pathname = "/shopping-bag.html";
 }
 
 const renderProductItem = () => {

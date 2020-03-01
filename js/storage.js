@@ -29,15 +29,11 @@ class Storage {
 
     updateShoppingCart(product) {
         let shoppingCart = JSON.parse(localStorage.getItem('shoppingCart'));
-        const sameItem = shoppingCart.items.find(item => {
-            return item.storageId === product.storageId && item.selectedColor === product.selectedColor && item.selectedSize === product.selectedSize
-        });
+        const isItemExist = shoppingCart.items.some(item => item.storageId === product.storageId);
 
-        if (sameItem) {
-            const sameItemIndex = shoppingCart.items.findIndex(item => {
-                return item.storageId === product.storageId && item.selectedColor === product.selectedColor && item.selectedSize === product.selectedSize
-            });
-            shoppingCart.items.splice(sameItemIndex, 1, {...sameItem });
+        if (isItemExist) {
+            const itemIndex = shoppingCart.items.findIndex(item => item.storageId === product.storageId);
+            shoppingCart.items.splice(itemIndex, 1, {...product });
         } else {
             shoppingCart.items.push(product);
         }
