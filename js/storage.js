@@ -16,25 +16,28 @@ class Storage {
 
     getShoppingCart() {
         let shoppingCart;
+
         if (localStorage.getItem('shoppingCart') === null) {
+
             shoppingCart = {};
         } else {
             shoppingCart = JSON.parse(localStorage.getItem('shoppingCart'));
         }
+
         return shoppingCart;
     }
 
     updateShoppingCart(product) {
         let shoppingCart = JSON.parse(localStorage.getItem('shoppingCart'));
         const sameItem = shoppingCart.items.find(item => {
-            return item.id === product.id && item.selectedColor === product.selectedColor && item.selectedSize === product.selectedSize
+            return item.storageId === product.storageId && item.selectedColor === product.selectedColor && item.selectedSize === product.selectedSize
         });
 
         if (sameItem) {
             const sameItemIndex = shoppingCart.items.findIndex(item => {
-                return item.id === product.id && item.selectedColor === product.selectedColor && item.selectedSize === product.selectedSize
+                return item.storageId === product.storageId && item.selectedColor === product.selectedColor && item.selectedSize === product.selectedSize
             });
-            shoppingCart.items.splice(sameItemIndex, 1, {...sameItem, quantity: sameItem.quantity + 1 });
+            shoppingCart.items.splice(sameItemIndex, 1, {...sameItem });
         } else {
             shoppingCart.items.push(product);
         }

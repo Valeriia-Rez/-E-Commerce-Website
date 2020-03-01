@@ -22,89 +22,13 @@
             </div>
         </section>
 
-        <section class="shopping_bag_items d-flex justify-around flex-direction-column">
-            <div class="product_item shopping_bag_item d-flex flex-direction-row mb-2">
-                <div class="product_item_img pos-relative">
-                    <span class="product_item_promo">New</span>
-                    <img src="img/photo2.jpg" alt="Only Skinny Jeans">
-                    <div class="item_hover d-none">
-                        <a href="#" class="item_hover_link">Edit item</a>
-                    </div>
-
-                </div>
-                <div class="product_info d-flex flex-direction-column align-items-baseline pl-4 f-size-14-tablet">
-                    <a href="#" class="product_name">Only Skinny Jeans</a>
-                    <span class="product_price"><strong>£66.50</strong></span>
-                    <div class="product_details mt-2 f-size-10 f-size-12-tablet">
-                        <p>Color: Phillipa wash</p>
-                        <p>Size: UK 17</p>
-                        <p>Quantity: <span class="text-danger pr-1 pl-2"><strong>&#8722;</strong></span>1<span class="text-danger pl-1"><strong>+</strong></span></p>
-                    </div>
-                    <button class="btn_link text-danger f-size-11 f-size-13-tablet">Remove item</button>
-                </div>
-
-            </div>
-            <div class="product_item shopping_bag_item d-flex flex-direction-row mb-2">
-                <div class="product_item_img pos-relative">
-                    <img src="img/photo10.jpg" alt="Paul & Joe Sister Jumper">
-                    <div class="item_hover d-none">
-                        <a href="#" class="item_hover_link">Edit item</a>
-                    </div>
-                </div>
-                <div class="product_info d-flex flex-direction-column align-items-baseline pl-4 f-size-14-tablet">
-                    <a href="#" class="product_name">Paul & Joe Sister Jumper with Neon Trims</a>
-                    <span class="product_price"><strong>£19.75</strong></span>
-                    <div class="product_details mt-2 f-size-10 f-size-12-tablet">
-                        <p>Color: Phillipa wash</p>
-                        <p>Size: UK 17</p>
-                        <p>Quantity: <span class="text-danger pr-1 pl-2"><strong>&#8722;</strong></span>1<span class="text-danger pl-1"><strong>+</strong></span></p>
-                    </div>
-                    <button class="btn_link text-danger f-size-11 f-size-13-tablet">Remove item</button>
-                </div>
-            </div>
-            <div class="product_item shopping_bag_item d-flex flex-direction-row mb-2">
-                <div class="product_item_img pos-relative">
-                    <img src="img/photo7.jpg" alt="Boyfriend T-Shirt">
-                    <div class="item_hover d-none">
-                        <a href="#" class="item_hover_link">Edit item</a>
-                    </div>
-                </div>
-                <div class="product_info d-flex flex-direction-column align-items-baseline pl-4 f-size-14-tablet">
-                    <a href="#" class="product_name">Boyfriend T-Shirt with Bohemian Print</a>
-                    <span class="product_price"><strong>£90.00</strong></span>
-                    <div class="product_details mt-2 f-size-10 f-size-12-tablet">
-                        <p>Color: Phillipa wash</p>
-                        <p>Size: UK 17</p>
-                        <p>Quantity: <span class="text-danger pr-1 pl-2"><strong>&#8722;</strong></span>1<span class="text-danger pl-1"><strong>+</strong></span></p>
-                    </div>
-                    <button class="btn_link text-danger f-size-11 f-size-13-tablet">Remove item</button>
-                </div>
-            </div>
-            <div class="product_item shopping_bag_item d-flex flex-direction-row mb-2">
-                <div class="product_item_img pos-relative">
-                    <span class="product_item_promo">New</span>
-                    <img src="img/photo5.jpg" alt="Neck Knitted Jumper">
-                    <div class="item_hover d-none">
-                        <a href="#" class="item_hover_link">Edit item</a>
-                    </div>
-                </div>
-                <div class="product_info d-flex flex-direction-column align-items-baseline pl-4 f-size-14-tablet">
-                    <a href="#" class="product_name">Neck Knitted Jumper</a>
-                    <span class="product_price"><strong>£76.25</strong></span>
-                    <div class="product_details mt-2 f-size-10 f-size-12-tablet">
-                        <p>Color: Phillipa wash</p>
-                        <p>Size: UK 17</p>
-                        <p>Quantity: <span class="text-danger pr-1 pl-2"><strong>&#8722;</strong></span>1<span class="text-danger pl-1"><strong>+</strong></span></p>
-                    </div>
-                    <button class="btn_link text-danger f-size-11 f-size-13-tablet">Remove item</button>
-                </div>
-            </div>
+        <section class="shopping_bag_items d-flex flex-direction-column" data-selector="shopping_bag_items">
         </section>
     </main>
     <section class="shopping_bag_message text-center">
         <p class="f-size-10 f-size-11-tablet"><strong>You've qualified for Free UK Next Day Delivery on tour order. Don't forget to enter the code <span class="text-danger">nextday</span> at checkout</strong></p>
     </section>
-    <section class="checkout_area d-flex flex-direction-column align-items-center py-4">
+    <section class="checkout_area container d-flex flex-direction-column align-items-center py-4">
 
         <div class="checkout_discount_amounts text-center mb-4">
             <span class="applied_discount text-danger f-size-16-tablet">Applied discount: £15.00</span>
@@ -119,11 +43,13 @@
         <button class="btn_link f-size-10 f-size-13-tablet"><strong>Empty bag</strong></button>
     </section>
 
-    <footer class="footer d-flex flex-direction-column" data-selector="footer">
+    <footer class="footer border-top d-flex flex-direction-column" data-selector="footer">
     </footer>
 
+    <script src="js/storage.js"></script>
     <script src="js/components/headerComponent.js"></script>
     <script src="js/components/footerComponent.js"></script>
+    <script src="js/pages/shoppingBag.js"></script>
     <script src="js/app.js" async="false"></script>
 </body>
 

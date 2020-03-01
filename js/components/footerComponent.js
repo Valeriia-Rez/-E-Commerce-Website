@@ -1,9 +1,8 @@
-let footer = document.querySelector("[data-selector='footer']");
-
 const renderFooterComponent = () => {
+    let footer = document.querySelector("[data-selector='footer']");
     footer.innerHTML = `
-    <div class="site_map d-flex flex-direction-column">
-        <div class="footer_info d-flex justify-between">
+    <div class="site_map border-bottom d-flex flex-direction-column">
+        <div class="footer_info border-bottom container d-flex justify-between">
             <div class="footer_left">
                 <h4 class="footer_text f-size-14 f-size-16-tablet">Quick Links</h4>
                 <ul class="footer_nav f-size-14-desktop">

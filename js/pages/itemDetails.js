@@ -2,9 +2,7 @@ const storage = new Storage();
 
 const productItemWrapper = document.querySelector("[data-selector='product_item_section']");
 
-
 const getProductPhotos = product => product.preview.map(productPhoto =>
-
     `<img src="${productPhoto}" alt="${product.title}" class="item_secondary_image">`
 );
 
@@ -34,19 +32,30 @@ const getSelectedSizeAndColor = (inputElement) => {
 }
 const addToBagHandler = (e) => {
     e.preventDefault();
+    const addedProductId = e.target.productId.value;
     const selectedSizeAndColor = getSelectedSizeAndColor(e.target);
     const { size, color } = selectedSizeAndColor;
-    const addedProductId = e.target.productId.value;
     const addedProduct = window.catalog.find(product => product.id === addedProductId);
     const finalProductPrice = addedProduct.price !== addedProduct.discountedPrice && addedProduct.discountedPrice ? addedProduct.discountedPrice : addedProduct.price;
+
+    const { items } = storage.getShoppingCart();
+    console.log(items);
+    const isSameItem = items && items.find(item => item.id === addedProductId);
+    console.log(item);
+    if (isSameItem) {
+
+    }
     const addToShoppingBagProduct = {
         ...addedProduct,
+        storageId: `storageID-${Math.floor(Math.random() * 10000 + 1)}`,
         selectedSize: size,
         selectedColor: color,
         quantity: 1,
         finalProductPrice
     }
     storage.storeToShoppingCart(addToShoppingBagProduct);
+    renderHeaderComponent();
+    /* window.location.pathname = "/shopping-bag.html";*/
 }
 
 const renderProductItem = () => {
@@ -105,3 +114,4 @@ const renderProductItem = () => {
 }
 
 window.addEventListener("DOMContentLoaded", renderProductItem);
+window.addEventListener("resize", renderProductItem);

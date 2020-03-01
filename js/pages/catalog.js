@@ -51,8 +51,9 @@ const renderProducts = (products, productCounts, element1, element2) => {
                     <span class="item_hover_link">View item</span>
                 </div>
             </div>
+            </a>
             <div class="product_info d-flex flex-direction-column text-center text-dark f-size-14-tablet">
-                <span class="product_name">${item.title}</span>
+                <a href="item.html" class="product_name">${item.title}</a>
                 ${item.discountedPrice && item.discountedPrice !== item.price  ? 
                 `<div class="discount_amounts_catalog">
                     <span class="price_before_discount price_before_discount_catalog f-size-18">£${(item.price).toFixed(2)}
@@ -62,7 +63,6 @@ const renderProducts = (products, productCounts, element1, element2) => {
                 </div>` : `<span class="product_price">£${(item.price).toFixed(2)}</span>`
             }
             </div>
-        </a>
     `;
     
     const productItem = document.createElement("div");
@@ -83,8 +83,7 @@ const renderProductItems = () => {
         const allProducts = window.catalog;
         const filteredAndOrderedProducts = filterAndOrderProducts(allProducts);
         const catalogProductsTopItemsCount = getCatalogProductsTopItemsCount();
-        console.log(filteredAndOrderedProducts, catalogProductsTopItemsCount);
-        renderProducts(filteredAndOrderedProducts,catalogProductsTopItemsCount,catalogProductsTop,catalogProductsBottom);
+      renderProducts(filteredAndOrderedProducts,catalogProductsTopItemsCount,catalogProductsTop,catalogProductsBottom);
 }
 window.addEventListener("DOMContentLoaded", renderProductItems);
 
