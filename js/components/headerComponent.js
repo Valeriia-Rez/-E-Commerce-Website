@@ -11,7 +11,7 @@ const renderHeaderComponent = () => {
         </div>
         <div class="header_shopArea d-flex align-items-center">
             <a href="#" class="header_email d-none d-block-tablet-up">E-mail sing up</a>
-            <a href="shopping-bag.html" class="header_bag"><img src="img/ico_bag.jpg" alt="bag" class="header_icon">Bag ${totalCost ? `£${totalCost.toFixed(2)}` : ""} (${itemsCount || "0"})</a>
+            <a href="shopping-bag.html" class="header_bag"><img src="img/ico_bag.jpg" alt="bag" class="header_icon">Bag ${parseInt(totalCost) ? `£${totalCost.toFixed(2)}` : ""} (${itemsCount || "0"})</a>
         </div>
         <div class="vertical_divider d-none-tablet-up" data-selector="vertical_divider"></div>
         <div class="mobile_icon d-none-tablet-up f-size-20">

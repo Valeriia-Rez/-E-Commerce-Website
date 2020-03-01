@@ -14,36 +14,29 @@
     <header class="container header_wrapper" data-selector="header">
     </header>
 
-    <main class="container">
+    <main>
         <h1 class="d-none">Shopping Bag</h1>
         <section class="product_header">
-            <div class="product_header_pannel d-flex align-items-center f-size-16-tablet">
+            <hr class="dividerLine" />
+            <div class="product_header_pannel container d-flex align-items-center f-size-16-tablet">
                 <h4 class="product_header_heading f-size-18 f-size-20-tablet f-size-26-desktop">Shopping Bag</h4>
             </div>
+            <hr class="dividerLine" />
         </section>
 
-        <section class="shopping_bag_items d-flex flex-direction-column" data-selector="shopping_bag_items">
+        <section class="shopping_bag_items container d-flex flex-direction-column" data-selector="shopping_bag_items">
         </section>
     </main>
     <section class="shopping_bag_message text-center">
         <p class="f-size-10 f-size-11-tablet"><strong>You've qualified for Free UK Next Day Delivery on tour order. Don't forget to enter the code <span class="text-danger">nextday</span> at checkout</strong></p>
     </section>
-    <section class="checkout_area container d-flex flex-direction-column align-items-center py-4">
+    <section class="checkout_area container d-flex flex-direction-column align-items-center py-4" data-selector="checkout_area">
 
-        <div class="checkout_discount_amounts text-center mb-4">
-            <span class="applied_discount text-danger f-size-16-tablet">Applied discount: £15.00</span>
-            <div class="price_after_discount mt-2">
-                <span class="f-size-16 f-size-20-tablet f-size-22-desktop">Total price: £236.50</span>
-            </div>
-        </div>
-        <div class="text-center">
-            <button class="btn f-size-18 f-size-20-tablet f-size-24-desktop" type="button">Checkout</button>
-        </div>
 
-        <button class="btn_link f-size-10 f-size-13-tablet"><strong>Empty bag</strong></button>
     </section>
+    <hr class="dividerLine" />
+    <footer class="footer d-flex flex-direction-column" data-selector="footer">
 
-    <footer class="footer border-top d-flex flex-direction-column" data-selector="footer">
     </footer>
 
     <script src="js/storage.js"></script>

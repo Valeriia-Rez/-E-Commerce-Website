@@ -1,7 +1,8 @@
 const renderFooterComponent = () => {
     let footer = document.querySelector("[data-selector='footer']");
     footer.innerHTML = `
-    <div class="site_map border-bottom d-flex flex-direction-column">
+   
+    <div class="site_map d-flex flex-direction-column">
         <div class="footer_info border-bottom container d-flex justify-between">
             <div class="footer_left">
                 <h4 class="footer_text f-size-14 f-size-16-tablet">Quick Links</h4>
@@ -41,7 +42,10 @@ const renderFooterComponent = () => {
                 <p><i>We have our own delivery service which operates in 23 major European cities. Delivery time - 3-5 days. </i></p>
             </div>
         </div>
-    </div>
+       </div>
+       <div>
+         <hr class="dividerLine" />
+       </div>
     <div class="footer_bottom">
         <div class="policy_and_copyRights f-size-10">
             <span class="bottom">Legal notice</span>

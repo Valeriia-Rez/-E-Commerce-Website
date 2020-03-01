@@ -34,24 +34,37 @@ class Storage {
         if (isItemExist) {
             const itemIndex = shoppingCart.items.findIndex(item => item.storageId === product.storageId);
             shoppingCart.items.splice(itemIndex, 1, {...product });
+
         } else {
             shoppingCart.items.push(product);
-        }
 
-        shoppingCart.itemsCount += 1;
-        shoppingCart.totalCost += product.finalProductPrice;
+        }
+        const totalCost = shoppingCart.items.reduce((acc, cur) => acc + cur.quantity * cur.finalProductPrice, 0);
+        const itemsCount = shoppingCart.items.reduce((acc, cur) => acc + cur.quantity, 0)
+        shoppingCart.itemsCount = itemsCount;
+        shoppingCart.totalCost = totalCost;
         localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart));
     }
 
-    deleteShoppingCart(id) {
+    deleteItemFromShoppingCart(id) {
+        console.log(id);
+        let updatedShoppingCartItems, updatedShoppingCart;
         let shoppingCart = JSON.parse(localStorage.getItem('shoppingCart'));
 
         shoppingCart.items.forEach(function(item, index) {
-            if (id === item.id) {
-                shoppingCart.items.splice(index, 1);
+            if (id === item.storageId) {
+                console.log(shoppingCart.totalCost - item.quantity * item.finalProductPrice);
+                updatedShoppingCartItems = shoppingCart.items.filter(item => item.storageId !== id);
+                updatedShoppingCart = {
+                    items: updatedShoppingCartItems,
+                    itemsCount: shoppingCart.itemsCount - item.quantity,
+                    totalCost: shoppingCart.totalCost - item.quantity * item.finalProductPrice
+
+                }
             }
         });
-        localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart));
+
+        localStorage.setItem('shoppingCart', JSON.stringify(updatedShoppingCart));
     }
 
     clearShoppingCart() {
