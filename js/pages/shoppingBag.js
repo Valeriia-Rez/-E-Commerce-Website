@@ -64,7 +64,7 @@ const renderShoppingBagItems = () => {
         </div>
     </div>
         `)).join("") :
-        "<p> No items added to shopping bag. </p>"
+        "<p> Your shopping bag is empty. Use Catalog to add new items.</p>"
 
 }
 

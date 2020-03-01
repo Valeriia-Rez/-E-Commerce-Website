@@ -41,18 +41,21 @@ const addToBagHandler = (e) => {
     const { items } = storage.getShoppingCart();
     console.log(items);
     const isSameItem = items && items.find(item => item.id === addedProductId);
-    console.log(item);
+    console.log(isSameItem);
+    let addToShoppingBagProduct;
     if (isSameItem) {
 
+    } else {
+        addToShoppingBagProduct = {
+            ...addedProduct,
+            storageId: `storageID-${Math.floor(Math.random() * 10000 + 1)}`,
+            selectedSize: size,
+            selectedColor: color,
+            quantity: 1,
+            finalProductPrice
+        }
     }
-    const addToShoppingBagProduct = {
-        ...addedProduct,
-        storageId: `storageID-${Math.floor(Math.random() * 10000 + 1)}`,
-        selectedSize: size,
-        selectedColor: color,
-        quantity: 1,
-        finalProductPrice
-    }
+
     storage.storeToShoppingCart(addToShoppingBagProduct);
     renderHeaderComponent();
     /* window.location.pathname = "/shopping-bag.html";*/
