@@ -2,8 +2,14 @@ const storage = new Storage();
 
 const productItemWrapper = document.querySelector("[data-selector='product_item_section']");
 
-const getProductPhotos = product => product.preview.map(productPhoto =>
-    `<img src="${productPhoto}" alt="${product.title}" class="item_secondary_image">`
+const getProductPhotos = product => product.preview.map((productPhoto, index) =>
+    `<div class="pos-relative switcher_secondary_image_wrapper">
+    <img src="${productPhoto}" alt="${product.title}" class="${index === 0 ? "active" : ""} item_secondary_image switcher_image">
+    <div class="item_hover d-none">
+        <span class="item_hover_link"></span>
+    </div>
+    </div>
+    `
 );
 
 const getProductsSizes = product => product.sizes.map((productSize, index) => {
@@ -19,21 +25,23 @@ const getProductsColors = product => product.colors.map((productColors, index) =
     <label for="${productColors}">${productColors}</label>`)
 });
 
-const getSelectedSizeAndColor = (inputElement) => {
-    console.log(inputElement.size);
-    let selectedSizesValue;
+const getSelectedSize = (inputElement) => {
+    let selectedSizeValue;
     if (!inputElement.size) {
-        selectedSizesValue = "";
+        selectedSizeValue = "";
     }
     if (inputElement.size && inputElement.size.checked) {
-        selectedSizesValue = inputElement.size.value;
+        selectedSizeValue = inputElement.size.value;
     }
     if (inputElement.size && !inputElement.size.checked) {
         const arrayOfSizes = Array.from(inputElement.size);
         const selectedSize = arrayOfSizes.find(item => item.checked);
-        selectedSizesValue = selectedSize && selectedSize.value;
+        selectedSizeValue = selectedSize && selectedSize.value;
     }
+    return selectedSizeValue;
+}
 
+const getSelectedColor = (inputElement) => {
     let selectedColorValue;
     if (!inputElement.color) {
         selectedColorValue = "";
@@ -46,11 +54,26 @@ const getSelectedSizeAndColor = (inputElement) => {
         const selectedColor = arrayOfColors.find(item => item.checked);
         selectedColorValue = selectedColor && selectedColor.value;
     }
+    return selectedColorValue;
+}
+const getSelectedSizeAndColor = (inputElement) => {
+    const selectedSizeValue = getSelectedSize(inputElement);
+    const selectedColorValue = getSelectedColor(inputElement);
 
     return {
-        size: selectedSizesValue,
+        size: selectedSizeValue,
         color: selectedColorValue
     }
+}
+
+const switchImage = (e) => {
+    console.log(e.target);
+    const primaryImage = document.querySelector("[data-selector='primary_image']");
+    const switcherActiveImage = document.querySelector(".switcher_image.active");
+    switcherActiveImage.classList.remove("active");
+    const selectedImageSrc = e.target.src;
+    primaryImage.setAttribute("src", selectedImageSrc);
+    e.target.classList.add("active");
 }
 const addToBagHandler = (e) => {
     e.preventDefault();
@@ -60,7 +83,6 @@ const addToBagHandler = (e) => {
     const addedProduct = window.catalog.find(product => product.id === addedProductId);
     const finalProductPrice = addedProduct.price !== addedProduct.discountedPrice && addedProduct.discountedPrice ? addedProduct.discountedPrice : addedProduct.price;
     const { items } = storage.getShoppingCart();
-    console.log(size, color);
     const isSameItem = items && items.find(item => item.id === addedProductId && item.selectedColor === color && item.selectedSize === size);
     let addToShoppingBagProduct;
     if (isSameItem) {
@@ -96,7 +118,7 @@ const renderProductItem = () => {
     <div class="item_section d-flex flex-direction-column">
         <div class="items d-flex flex-direction-column">
             <div class="item_primary">
-                <img src="${productItemData.thumbnail}" alt="${productItemData.title}" class="item_primary_image">
+                <img src="${productItemData.thumbnail}" alt="${productItemData.title}" class="item_primary_image switcher_image" data-selector="primary_image">
             </div>
             <div class="item_secondary d-flex">
                 ${photos.join("")}
@@ -117,13 +139,13 @@ const renderProductItem = () => {
         <form data-selector="add_to_bag">
         <input type="hidden" value="${productItemData.id}" name="productId"/>
             <div class="item_property d-flex  flex-direction-column f-size-14">
-                <div class="item_size d-flex align-items-center justify-between">
+                <div class="item_size d-flex align-items-center">
                     <div class="item_description">Size</div>
                     <div class="item_button_wrapper d-flex">
                     ${sizes.join("")}
                     </div>
                 </div>
-                <div class="item_color d-flex align-items-center justify-between">
+                <div class="item_color d-flex align-items-center">
                     <div class="item_description">Color</div>
                     <div class="item_button_wrapper d-flex">
                     ${colors.join("")}
@@ -138,7 +160,10 @@ const renderProductItem = () => {
              `;
     productItemWrapper.innerHTML = productHTML;
     const addToBagForm = document.querySelector("[data-selector='add_to_bag']");
+    const switcherImages = document.querySelectorAll(".switcher_image");
     addToBagForm.addEventListener("submit", addToBagHandler);
+    switcherImages.forEach(image => image.addEventListener("click", switchImage));
+
 }
 
 window.addEventListener("DOMContentLoaded", renderProductItem);

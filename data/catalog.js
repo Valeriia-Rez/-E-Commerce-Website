@@ -95,7 +95,7 @@ window.catalog = [{
     colors: ['Black', 'Blue'],
     sizes: ['UK 52', 'UK 54', 'UK 56'],
     thumbnail: 'img/full.jpg',
-    preview: ['img/thumb_0.jpg', 'img/thumb_1.jpg', 'img/thumb_2.jpg']
+    preview: ['img/full.jpg', 'img/thumb_1.jpg', 'img/thumb_2.jpg']
 }, {
     id: '8b300772-eee3-4ff1-b091-e89f17e0e469',
     dateAdded: '2017-08-10T14:59:00.000Z',
