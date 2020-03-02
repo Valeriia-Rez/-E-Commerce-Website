@@ -45,6 +45,8 @@ body {
 }
 
 .align-items-baseline {
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
     align-items: baseline;
 }
 
@@ -458,8 +460,8 @@ button {
 }
 
 .word_end_gradient {
-    background: -webkit-gradient(linear, left top, right top, color-stop(50%, var(--danger-color)), color-stop(85%, var(--white-color)));
     background: -o-linear-gradient(left, var(--danger-color) 50%, var(--white-color) 85%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, var(--danger-color)), color-stop(85%, var(--white-color)));
     background: linear-gradient(to right, var(--danger-color) 50%, var(--white-color) 85%);
     -webkit-background-clip: text;
     background-clip: text;
@@ -929,8 +931,8 @@ button {
         display: block;
     }
     .header_navbar.expanded .nav_main {
-        background: -webkit-gradient(linear, left top, right top, color-stop(63%, var(--main-color)), color-stop(65%, var(--white-color)));
         background: -o-linear-gradient(left, var(--main-color) 63%, var(--white-color) 65%);
+        background: -webkit-gradient(linear, left top, right top, color-stop(63%, var(--main-color)), color-stop(65%, var(--white-color)));
         background: linear-gradient(to right, var(--main-color) 63%, var(--white-color) 65%);
         -webkit-background-clip: text;
         background-clip: text;
