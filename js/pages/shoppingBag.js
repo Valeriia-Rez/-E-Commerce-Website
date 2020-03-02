@@ -54,7 +54,7 @@ const renderShoppingBagItems = () => {
     shoppingBagItems.innerHTML = items && items.length ? items.map(item => (`
     
         <div class="product_item shopping_bag_item d-flex flex-direction-row mb-2">
-        <a href="item.html" class="product_item_link">
+        <a href="item.html#${item.id}" class="product_item_link">
         <div class="product_item_img pos-relative">
         ${item.hasNew ? "<span class='product_item_promo'>New</span>" : ""}
             <img src=${item.thumbnail} alt=${item.title}>

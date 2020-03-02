@@ -7,6 +7,7 @@ const getProductPhotos = product => product.preview.map(productPhoto =>
 );
 
 const getProductsSizes = product => product.sizes.map((productSize, index) => {
+
     const checkedByDefault = index === 0 ? "checked" : "";
     return (` <input type="radio" ${checkedByDefault} name="size" class="item_btn" id="${productSize.replace(/\s+/g, '')}" value="${productSize}" />
     <label for="${productSize.replace(/\s+/g, '')}">${productSize}</label>`)
@@ -19,12 +20,33 @@ const getProductsColors = product => product.colors.map((productColors, index) =
 });
 
 const getSelectedSizeAndColor = (inputElement) => {
-    const arrayOfSizes = Array.from(inputElement.size);
-    const selectedSize = arrayOfSizes.find(item => item.checked);
-    const selectedSizesValue = selectedSize && selectedSize.value;
-    const arrayOfColors = Array.from(inputElement.color);
-    const selectedColor = arrayOfColors.find(item => item.checked);
-    const selectedColorValue = selectedColor && selectedColor.value;
+    console.log(inputElement.size);
+    let selectedSizesValue;
+    if (!inputElement.size) {
+        selectedSizesValue = "";
+    }
+    if (inputElement.size && inputElement.size.checked) {
+        selectedSizesValue = inputElement.size.value;
+    }
+    if (inputElement.size && !inputElement.size.checked) {
+        const arrayOfSizes = Array.from(inputElement.size);
+        const selectedSize = arrayOfSizes.find(item => item.checked);
+        selectedSizesValue = selectedSize && selectedSize.value;
+    }
+
+    let selectedColorValue;
+    if (!inputElement.color) {
+        selectedColorValue = "";
+    }
+    if (inputElement.color && inputElement.color.checked) {
+        selectedColorValue = inputElement.color.value;
+    }
+    if (inputElement.color && !inputElement.color.checked) {
+        const arrayOfColors = Array.from(inputElement.color);
+        const selectedColor = arrayOfColors.find(item => item.checked);
+        selectedColorValue = selectedColor && selectedColor.value;
+    }
+
     return {
         size: selectedSizesValue,
         color: selectedColorValue
@@ -38,6 +60,7 @@ const addToBagHandler = (e) => {
     const addedProduct = window.catalog.find(product => product.id === addedProductId);
     const finalProductPrice = addedProduct.price !== addedProduct.discountedPrice && addedProduct.discountedPrice ? addedProduct.discountedPrice : addedProduct.price;
     const { items } = storage.getShoppingCart();
+    console.log(size, color);
     const isSameItem = items && items.find(item => item.id === addedProductId && item.selectedColor === color && item.selectedSize === size);
     let addToShoppingBagProduct;
     if (isSameItem) {
@@ -63,7 +86,9 @@ const addToBagHandler = (e) => {
 
 const renderProductItem = () => {
     const allProducts = window.catalog;
-    const productItemData = allProducts.find(product => product.id === "80d32566-d81c-4ba0-9edf-0eceda3b4360");
+    const defaultItem = "80d32566-d81c-4ba0-9edf-0eceda3b4360";
+    const itemId = window.location.hash ? window.location.hash.replace("#", "") : defaultItem;
+    const productItemData = allProducts.find(product => product.id === itemId);
     const photos = getProductPhotos(productItemData);
     const sizes = getProductsSizes(productItemData);
     const colors = getProductsColors(productItemData);
@@ -93,7 +118,7 @@ const renderProductItem = () => {
         <input type="hidden" value="${productItemData.id}" name="productId"/>
             <div class="item_property d-flex  flex-direction-column f-size-14">
                 <div class="item_size d-flex align-items-center justify-between">
-                    <div class="item_description">Siz</div>
+                    <div class="item_description">Size</div>
                     <div class="item_button_wrapper d-flex">
                     ${sizes.join("")}
                     </div>

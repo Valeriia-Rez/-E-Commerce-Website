@@ -43,12 +43,12 @@ const getCatalogProductsTopItemsCount = () => {
 const renderProducts = (products, productCounts, element1, element2) => {
         return products.forEach((item, index) => {
                     let product = `
-        <a href="item.html " class="product_item_link ">
+        <a href="item.html#${item.id}" class="product_item_link ">
             <div class="product_item_img pos-relative">
                 ${item.hasNew ? "<span class='product_item_promo'>New</span>" : ""}
                 <img src="${item.thumbnail}" alt=${item.title}>
                 <div class="item_hover d-none">
-                    <span class="item_hover_link">View</span>
+                    <span class="item_hover_link">View Item</span>
                 </div>
             </div>
         </a>
