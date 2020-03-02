@@ -48,10 +48,10 @@ const renderProducts = (products, productCounts, element1, element2) => {
                 ${item.hasNew ? "<span class='product_item_promo'>New</span>" : ""}
                 <img src="${item.thumbnail}" alt=${item.title}>
                 <div class="item_hover d-none">
-                    <span class="item_hover_link">View item</span>
+                    <span class="item_hover_link">View</span>
                 </div>
             </div>
-            </a>
+        </a>
             <div class="product_info d-flex flex-direction-column text-center text-dark f-size-14-tablet">
                 <a href="item.html" class="product_name">${item.title}</a>
                 ${item.discountedPrice && item.discountedPrice !== item.price  ? 

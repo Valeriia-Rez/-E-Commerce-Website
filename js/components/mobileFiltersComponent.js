@@ -1,8 +1,7 @@
 const renderMobileFiltersComponent = () => {
     let mobileFilters = document.querySelector("[data-selector='mobile_filters']");
-    const storage = new Storage();
     mobileFilters.innerHTML = `
-    <ul class="mobile_filters_list d-flex flex-wrap">
+    <ul class="mobile_filters_list d-flex flex-wrap py-4">
     <li class="filter ">
         <h2>Fashion</h2>
         <ul class="filter_items text-gray">

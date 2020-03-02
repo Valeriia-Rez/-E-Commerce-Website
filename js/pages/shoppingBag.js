@@ -101,8 +101,8 @@ const renderCheckoutSection = () => {
             <div class="price_after_discount mt-2">
                 <span class="f-size-16 f-size-20-tablet f-size-22-desktop">Total price: ${totalCost ? `£${totalCost.toFixed(2)}` : 0}</span>
             </div>
-            </div>
-            <div class="text-center">
+        </div>
+        <div class="text-center">
             <button class="btn f-size-18 f-size-20-tablet f-size-24-desktop" data-selector="checkout_button" type="button">Checkout</button>
         </div>
         <button class="btn_link f-size-10 f-size-13-tablet" data-selector="clear_bag_button"><strong>Empty bag</strong></button>

@@ -377,6 +377,7 @@ button {
 
 .header {
     height: 70px;
+    align-items: stretch;
 }
 
 .header_logo {
@@ -411,6 +412,10 @@ button {
 
 .search_wrapper {
     width: 168px;
+}
+
+.mobile_icon {
+    align-self: center;
 }
 
 .mobile_menu {
@@ -608,6 +613,7 @@ button {
 }
 
 .price_before_discount {
+    display: inline;
     color: var(--gray-color);
 }
 
@@ -1310,7 +1316,7 @@ button {
         width: 45%;
     }
     .text {
-        width: 57%;
+        width: 54%;
         padding: 10% 0;
         font-family: var(--font-tertiary);
         color: var(--gray-color);

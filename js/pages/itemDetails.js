@@ -93,7 +93,7 @@ const renderProductItem = () => {
         <input type="hidden" value="${productItemData.id}" name="productId"/>
             <div class="item_property d-flex  flex-direction-column f-size-14">
                 <div class="item_size d-flex align-items-center justify-between">
-                    <div class="item_description">Size</div>
+                    <div class="item_description">Siz</div>
                     <div class="item_button_wrapper d-flex">
                     ${sizes.join("")}
                     </div>
