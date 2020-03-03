@@ -44,7 +44,7 @@ const renderBestOfferItems = () => {
                         </a>
                         <div class="product_info d-flex flex-direction-column text-center f-size-14-tablet">
                             <a href="item.html" class="product_name">${bestOfferItemData[1].title}</a>
-                            <span class="product_price">£${bestOfferItemData[1].price}</span>
+                            <span class="product_price">£${(bestOfferItemData[1].price).toFixed(2)}</span>
                         </div>
                     </div>
                     <span class="plus d-block f-size-26">+</span>
@@ -54,7 +54,7 @@ const renderBestOfferItems = () => {
                         </a>
                         <div class="product_info d-flex flex-direction-column text-center f-size-14-tablet">
                             <a href="item.html" class="product_name">${bestOfferItemData[0].title}</a>
-                            <span class="product_price">£${bestOfferItemData[0].price}</span>
+                            <span class="product_price">£${(bestOfferItemData[0].price).toFixed(2)}</span>
                         </div>
                     </div>
                 </div>
@@ -75,8 +75,8 @@ const renderBestOfferItems = () => {
                 <button data-firstid=${itemIdOne} data-secondid=${itemIdTwo} data-selector="addToBagButton" class="btn  f-size-20">Add to bag</button>
             </div>
           `;
-    const addToBag = document.querySelector("[data-selector='addToBagButton']");
-    addToBag.addEventListener("click", addToBagBestOffer);
+    const addToBag = document.querySelectorAll("[data-selector='addToBagButton']");
+    addToBag.forEach(button => button.addEventListener("click", addToBagBestOffer));
 };
 
 window.addEventListener("DOMContentLoaded", renderBestOfferItems);

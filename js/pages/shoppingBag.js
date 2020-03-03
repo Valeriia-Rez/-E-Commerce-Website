@@ -38,6 +38,7 @@ const clearShoppingBag = () => {
     renderHeaderComponent();
     renderShoppingBagPage();
 };
+
 const checkoutItemsFromShoppingBag = () => {
     const { items } = storage.getShoppingCart();
     if (!items.length) return;
@@ -99,15 +100,9 @@ const renderShoppingBagItems = () => {
         .join("") :
         `<p data-selector="checkout_message" class="f-size-20"> Your shopping bag is empty. Use <a href="catalog.html" class="text-danger">Catalog</a> to add new items.</p>`;
 
-    const increaseQuantityButtons = document.querySelectorAll(
-        "[data-selector='increase_quantity_button']"
-    );
-    const decreaseQuantityButtons = document.querySelectorAll(
-        "[data-selector='decrease_quantity_button']"
-    );
-    const removeItemButtons = document.querySelectorAll(
-        "[data-selector='remove_item_button']"
-    );
+    const increaseQuantityButtons = document.querySelectorAll("[data-selector='increase_quantity_button']");
+    const decreaseQuantityButtons = document.querySelectorAll("[data-selector='decrease_quantity_button']");
+    const removeItemButtons = document.querySelectorAll("[data-selector='remove_item_button']");
     removeItemButtons.forEach(button =>
         button.addEventListener("click", removeItemFromShoppingCart)
     );
