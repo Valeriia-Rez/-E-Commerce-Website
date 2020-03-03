@@ -22,13 +22,14 @@ var Storage = /*#__PURE__*/function () {
     value: function storeToShoppingCart(product) {
       var shoppingCart;
 
-      if (localStorage.getItem('shoppingCart') === null) {
+      if (localStorage.getItem("shoppingCart") === null) {
         shoppingCart = {
           items: [product],
           totalCost: product.finalProductPrice,
-          itemsCount: 1
+          itemsCount: 1,
+          discount: null
         };
-        localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart));
+        localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
       } else {
         this.updateShoppingCart(product);
       }
@@ -38,10 +39,10 @@ var Storage = /*#__PURE__*/function () {
     value: function getShoppingCart() {
       var shoppingCart;
 
-      if (localStorage.getItem('shoppingCart') === null) {
+      if (localStorage.getItem("shoppingCart") === null) {
         shoppingCart = {};
       } else {
-        shoppingCart = JSON.parse(localStorage.getItem('shoppingCart'));
+        shoppingCart = JSON.parse(localStorage.getItem("shoppingCart"));
       }
 
       return shoppingCart;
@@ -49,7 +50,7 @@ var Storage = /*#__PURE__*/function () {
   }, {
     key: "updateShoppingCart",
     value: function updateShoppingCart(product) {
-      var shoppingCart = JSON.parse(localStorage.getItem('shoppingCart'));
+      var shoppingCart = JSON.parse(localStorage.getItem("shoppingCart"));
       var isItemExist = shoppingCart.items.some(function (item) {
         return item.storageId === product.storageId;
       });
@@ -70,18 +71,36 @@ var Storage = /*#__PURE__*/function () {
         return acc + cur.quantity;
       }, 0);
       shoppingCart.itemsCount = itemsCount;
-      shoppingCart.totalCost = totalCost;
-      localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart));
+      shoppingCart.totalCost = product.discount ? totalCost - product.discount : totalCost;
+      shoppingCart.discount = this.hasDiscount(shoppingCart.discount, product.discount);
+      localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
+    }
+  }, {
+    key: "hasDiscount",
+    value: function hasDiscount(shoppingCartDiscount, productDiscount) {
+      if (!shoppingCartDiscount && !productDiscount) {
+        return null;
+      }
+
+      if (!shoppingCartDiscount && productDiscount) {
+        return productDiscount;
+      }
+
+      if (shoppingCartDiscount && productDiscount) {
+        return shoppingCartDiscount + productDiscount;
+      }
+
+      if (!productDiscount && shoppingCartDiscount) {
+        return shoppingCartDiscount;
+      }
     }
   }, {
     key: "deleteItemFromShoppingCart",
     value: function deleteItemFromShoppingCart(id) {
-      console.log(id);
       var updatedShoppingCartItems, updatedShoppingCart;
-      var shoppingCart = JSON.parse(localStorage.getItem('shoppingCart'));
+      var shoppingCart = JSON.parse(localStorage.getItem("shoppingCart"));
       shoppingCart.items.forEach(function (item, index) {
         if (id === item.storageId) {
-          console.log(shoppingCart.totalCost - item.quantity * item.finalProductPrice);
           updatedShoppingCartItems = shoppingCart.items.filter(function (item) {
             return item.storageId !== id;
           });
@@ -92,12 +111,12 @@ var Storage = /*#__PURE__*/function () {
           };
         }
       });
-      localStorage.setItem('shoppingCart', JSON.stringify(updatedShoppingCart));
+      localStorage.setItem("shoppingCart", JSON.stringify(updatedShoppingCart));
     }
   }, {
     key: "clearShoppingCart",
     value: function clearShoppingCart() {
-      localStorage.removeItem('shoppingCart');
+      localStorage.removeItem("shoppingCart");
     }
   }]);
 
