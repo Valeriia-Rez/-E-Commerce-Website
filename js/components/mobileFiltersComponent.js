@@ -69,9 +69,7 @@ const renderMobileFiltersComponent = () => {
         </ul>
     </li>
 </ul>
-    `;
-    return mobileFilters;
+`;
 };
-
 
 window.addEventListener("DOMContentLoaded", renderMobileFiltersComponent);

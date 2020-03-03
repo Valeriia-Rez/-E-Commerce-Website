@@ -1,7 +1,6 @@
 const renderFooterComponent = () => {
     let footer = document.querySelector("[data-selector='footer']");
     footer.innerHTML = `
-   
     <div class="site_map d-flex flex-direction-column">
         <div class="footer_info border-bottom container d-flex justify-between">
             <div class="footer_left">
@@ -64,8 +63,7 @@ const renderFooterComponent = () => {
         <img src="img/fb.jpg" alt="fb" class="fb">
         <img src="img/twi.jpg" alt="twitter" class="twitter">
     </div>
-    `
-    return footer;
+    `;
 };
 
 window.addEventListener("DOMContentLoaded", renderFooterComponent);

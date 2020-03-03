@@ -1,5 +1,4 @@
 const storage = new Storage();
-
 const productItemWrapper = document.querySelector("[data-selector='product_item_section']");
 
 const getProductPhotos = product => product.preview.map((productPhoto, index) =>
@@ -13,7 +12,6 @@ const getProductPhotos = product => product.preview.map((productPhoto, index) =>
 );
 
 const getProductsSizes = product => product.sizes.map((productSize, index) => {
-
     const checkedByDefault = index === 0 ? "checked" : "";
     return (` <input type="radio" ${checkedByDefault} name="size" class="item_btn" id="${productSize.replace(/\s+/g, '')}" value="${productSize}" />
     <label for="${productSize.replace(/\s+/g, '')}">${productSize}</label>`)
@@ -67,7 +65,6 @@ const getSelectedSizeAndColor = (inputElement) => {
 }
 
 const switchImage = (e) => {
-    console.log(e.target);
     const primaryImage = document.querySelector("[data-selector='primary_image']");
     const switcherActiveImage = document.querySelector(".switcher_image.active");
     switcherActiveImage.classList.remove("active");
@@ -75,6 +72,7 @@ const switchImage = (e) => {
     primaryImage.setAttribute("src", selectedImageSrc);
     e.target.classList.add("active");
 }
+
 const addToBagHandler = (e) => {
     e.preventDefault();
     const addedProductId = e.target.productId.value;
@@ -157,13 +155,13 @@ const renderProductItem = () => {
             </div>
         </form>
      </div>
-             `;
+    `;
+
     productItemWrapper.innerHTML = productHTML;
     const addToBagForm = document.querySelector("[data-selector='add_to_bag']");
     const switcherImages = document.querySelectorAll(".switcher_image");
     addToBagForm.addEventListener("submit", addToBagHandler);
     switcherImages.forEach(image => image.addEventListener("click", switchImage));
-
 }
 
 window.addEventListener("DOMContentLoaded", renderProductItem);

@@ -16,14 +16,11 @@ const openMobileHandler = () => {
     const verticalDivider = document.querySelector("[data-selector='vertical_divider']");
 
     if (mobileMenu && mobileMenu.classList.contains("d-none")) {
-
         mobileMenu.classList.remove("d-none");
         openMobileBtn.classList.add("d-none");
         closeMobileBtn.classList.remove("d-none");
         verticalDivider.classList.add("d-none");
-
     }
-
 }
 
 const closeMobileHandler = () => {
@@ -40,14 +37,10 @@ const closeMobileHandler = () => {
     }
 }
 
-
-
 const renderHeaderComponent = () => {
-
         let header = document.querySelector("[data-selector='header']");
         const storage = new Storage();
         const { itemsCount, totalCost } = storage.getShoppingCart();
-
         header.innerHTML = `
     <div class="header d-flex">
         <div class="header_logo d-flex f-size-26-tablet">
@@ -106,7 +99,6 @@ const renderHeaderComponent = () => {
             </div>
         </div>
     </div>`;
-
-}
+};
 
 window.addEventListener("DOMContentLoaded", renderHeaderComponent);
