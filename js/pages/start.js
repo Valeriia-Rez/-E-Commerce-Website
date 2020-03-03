@@ -1,7 +1,6 @@
 const storage = new Storage();
 
 const addToBagBestOffer = () => {
-
     const { items } = storage.getShoppingCart();
 }
 
