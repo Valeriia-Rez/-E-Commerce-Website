@@ -2,8 +2,8 @@
 
 ## Setup the project
 This project requires npm to run.
-By default for development all html files will use not compiled js files.
-To use compiled js you need to uncomment all js scripts within html files.
+By default all html files will use already compiled in Babel js scripts.
+For development you need to uncomment all js scripts within html files.
 
 ```
 git clone git@github.com:Valeriia-Rez/-E-Commerce-Website.git

@@ -47,17 +47,14 @@ const checkoutItemsFromShoppingBag = () => {
 }
 
 const renderShoppingBagItems = () => {
-
     const { items } = storage.getShoppingCart();
     const shoppingBagItems = document.querySelector("[data-selector='shopping_bag_items']");
-
     shoppingBagItems.innerHTML = items && items.length ? items.map(item => (`
-    
-        <div class="product_item shopping_bag_item d-flex flex-direction-row mb-2">
+    <div class="product_item shopping_bag_item d-flex flex-direction-row mb-2">
         <a href="item.html#${item.id}" class="product_item_link">
         <div class="product_item_img pos-relative">
         ${item.hasNew ? "<span class='product_item_promo'>New</span>" : ""}
-            <img src=${item.thumbnail} alt=${item.title}>
+            <img src=${item.thumbnail} alt=${item.title}/>
             <div class="item_hover d-none">
                 <span class="item_hover_link">View item</span>
             </div>
@@ -85,11 +82,9 @@ const renderShoppingBagItems = () => {
     const increaseQuantityButtons = document.querySelectorAll("[data-selector='increase_quantity_button']");
     const decreaseQuantityButtons = document.querySelectorAll("[data-selector='decrease_quantity_button']");
     const removeItemButtons = document.querySelectorAll("[data-selector='remove_item_button']");
-
     removeItemButtons.forEach(button => button.addEventListener("click", removeItemFromShoppingCart));
     increaseQuantityButtons.forEach(button => button.addEventListener("click", increaseQuantity));
     decreaseQuantityButtons.forEach(button => button.addEventListener("click", decreaseQuantity));
-
 }
 
 const renderCheckoutSection = () => {
@@ -107,11 +102,11 @@ const renderCheckoutSection = () => {
         </div>
         <button class="btn_link f-size-10 f-size-13-tablet" data-selector="clear_bag_button"><strong>Empty bag</strong></button>
          `;
+         
     const clearBagButton = document.querySelector("[data-selector='clear_bag_button']");
     const checkoutButton = document.querySelector("[data-selector='checkout_button']");
     clearBagButton.addEventListener("click", clearShoppingBag);
     checkoutButton.addEventListener("click",checkoutItemsFromShoppingBag);
-
 }
 const renderShoppingBagPage = () => {
     renderShoppingBagItems();

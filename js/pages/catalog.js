@@ -2,14 +2,12 @@ const openFiltersBtn = document.querySelector("[data-selector='filters_open']");
 const closeFiltersBtn = document.querySelector("[data-selector='filters_close']");
 const mobileFilters = document.querySelector("[data-selector='mobile_filters']");
 
-
 const openFiltersHandler = () => {
     if (mobileFilters.classList.contains("d-none")) {
         mobileFilters.classList.remove("d-none");
         openFiltersBtn.classList.add("d-none");
         closeFiltersBtn.classList.remove("d-none");
     }
-
 }
 
 const closeFiltersHandler = () => {
@@ -18,10 +16,9 @@ const closeFiltersHandler = () => {
         openFiltersBtn.classList.remove("d-none");
         closeFiltersBtn.classList.add("d-none");
     }
-
 }
 
-const filterAndOrderProducts = (products) =>
+const filterAndOrderProducts = products =>
     products.filter(product => {
         return product.category === "women" && product.fashion === "Casual style";
     }).sort((a, b) => {
@@ -43,15 +40,15 @@ const getCatalogProductsTopItemsCount = () => {
 const renderProducts = (products, productCounts, element1, element2) => {
         return products.forEach((item, index) => {
                     let product = `
-        <a href="item.html#${item.id}" class="product_item_link ">
-            <div class="product_item_img pos-relative">
-                ${item.hasNew ? "<span class='product_item_promo'>New</span>" : ""}
-                <img src="${item.thumbnail}" alt=${item.title}>
-                <div class="item_hover d-none">
-                    <span class="item_hover_link">View Item</span>
+            <a href="item.html#${item.id}" class="product_item_link ">
+                <div class="product_item_img pos-relative">
+                    ${item.hasNew ? "<span class='product_item_promo'>New</span>" : ""}
+                    <img src="${item.thumbnail}" alt=${item.title}/>
+                    <div class="item_hover d-none">
+                        <span class="item_hover_link">View Item</span>
+                    </div>
                 </div>
-            </div>
-        </a>
+            </a>
             <div class="product_info d-flex flex-direction-column text-center text-dark f-size-14-tablet">
                 <a href="item.html" class="product_name">${item.title}</a>
                 ${item.discountedPrice && item.discountedPrice !== item.price  ? 
@@ -63,7 +60,7 @@ const renderProducts = (products, productCounts, element1, element2) => {
                 </div>` : `<span class="product_price">£${(item.price).toFixed(2)}</span>`
             }
             </div>
-    `;
+        `;
     
     const productItem = document.createElement("div");
     productItem.className = "product_item";
@@ -85,7 +82,6 @@ const renderProductItems = () => {
         const catalogProductsTopItemsCount = getCatalogProductsTopItemsCount();
       renderProducts(filteredAndOrderedProducts,catalogProductsTopItemsCount,catalogProductsTop,catalogProductsBottom);
 }
+
 window.addEventListener("DOMContentLoaded", renderProductItems);
-
-
 window.addEventListener("resize", renderProductItems);
