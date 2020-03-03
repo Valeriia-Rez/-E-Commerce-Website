@@ -3,13 +3,12 @@ const productItemWrapper = document.querySelector("[data-selector='product_item_
 
 const getProductPhotos = product => product.preview.map((productPhoto, index) =>
     `<div class="pos-relative switcher_secondary_image_wrapper">
-    <img src="${productPhoto}" alt="${product.title}" class="${index === 0 ? "active" : ""} item_secondary_image switcher_image">
+    <img src="${productPhoto}" alt="${product.title}" class="${index === 0 ? "active" : ""} item_secondary_image switcher_image"/>
     <div class="item_hover d-none">
         <span class="item_hover_link"></span>
     </div>
     </div>
-    `
-);
+    `);
 
 const getProductsSizes = product => product.sizes.map((productSize, index) => {
     const checkedByDefault = index === 0 ? "checked" : "";
@@ -54,10 +53,10 @@ const getSelectedColor = (inputElement) => {
     }
     return selectedColorValue;
 }
+
 const getSelectedSizeAndColor = (inputElement) => {
     const selectedSizeValue = getSelectedSize(inputElement);
     const selectedColorValue = getSelectedColor(inputElement);
-
     return {
         size: selectedSizeValue,
         color: selectedColorValue
@@ -116,7 +115,7 @@ const renderProductItem = () => {
     <div class="item_section d-flex flex-direction-column">
         <div class="items d-flex flex-direction-column">
             <div class="item_primary">
-                <img src="${productItemData.thumbnail}" alt="${productItemData.title}" class="item_primary_image switcher_image" data-selector="primary_image">
+                <img src="${productItemData.thumbnail}" alt="${productItemData.title}" class="item_primary_image switcher_image" data-selector="primary_image"/>
             </div>
             <div class="item_secondary d-flex">
                 ${photos.join("")}

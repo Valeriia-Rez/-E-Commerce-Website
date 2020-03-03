@@ -7,7 +7,7 @@
     --lightGray-color: #e5e5e5;
     --font-primary: "Open Sans", sans-serif;
     --font-secondary: "Roboto", sans-serif;
-    --font-tertiary: 'Times New Roman', Times, serif;
+    --font-tertiary: "Times New Roman", Times, serif;
     --border: 1px solid var(--lightGray-color);
     --fontWeight: bold;
 }
@@ -466,9 +466,9 @@ button {
 }
 
 .word_end_gradient {
-    background: -o-linear-gradient(left, var(--danger-color) 50%, var(--white-color) 85%);
-    background: -webkit-gradient(linear, left top, right top, color-stop(50%, var(--danger-color)), color-stop(85%, var(--white-color)));
-    background: linear-gradient(to right, var(--danger-color) 50%, var(--white-color) 85%);
+    background: -o-linear-gradient( left, var(--danger-color) 50%, var(--white-color) 85%);
+    background: -webkit-gradient( linear, left top, right top, color-stop(50%, var(--danger-color)), color-stop(85%, var(--white-color)));
+    background: linear-gradient( to right, var(--danger-color) 50%, var(--white-color) 85%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -939,9 +939,9 @@ button {
     .search_wrapper {
         width: 250px;
         max-width: 10px;
-        -webkit-transition: all .5s ease;
-        -o-transition: all .5s ease;
-        transition: all .5s ease;
+        -webkit-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
     }
     .search_icon {
         position: static;
@@ -956,9 +956,9 @@ button {
         display: block;
     }
     .header_navbar.expanded .nav_main {
-        background: -o-linear-gradient(left, var(--main-color) 63%, var(--white-color) 65%);
-        background: -webkit-gradient(linear, left top, right top, color-stop(63%, var(--main-color)), color-stop(65%, var(--white-color)));
-        background: linear-gradient(to right, var(--main-color) 63%, var(--white-color) 65%);
+        background: -o-linear-gradient( left, var(--main-color) 63%, var(--white-color) 65%);
+        background: -webkit-gradient( linear, left top, right top, color-stop(63%, var(--main-color)), color-stop(65%, var(--white-color)));
+        background: linear-gradient( to right, var(--main-color) 63%, var(--white-color) 65%);
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -989,6 +989,10 @@ button {
     /*Products Section*/
     .products {
         padding: 0 38px;
+    }
+    .products_best_offer {
+        justify-content: center;
+        flex-wrap: wrap;
     }
     .product_item {
         max-width: 205px;
@@ -1229,7 +1233,7 @@ button {
     .dividerLine {
         max-width: 1350px;
         margin: 0 auto;
-        background: -webkit-gradient(linear, 0 0, 100% 0, from(var(--snow-color)), to(var(--snow-color)), color-stop(50%, var(--gray-color)));
+        background: -webkit-gradient( linear, 0 0, 100% 0, from(var(--snow-color)), to(var(--snow-color)), color-stop(50%, var(--gray-color)));
     }
     /*Products Section*/
     .product_item {

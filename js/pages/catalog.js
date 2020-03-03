@@ -42,7 +42,7 @@ const renderProducts = (products, productCounts, element1, element2) => {
             <a href="item.html#${item.id}" class="product_item_link ">
                 <div class="product_item_img pos-relative">
                     ${item.hasNew ? "<span class='product_item_promo'>New</span>" : ""}
-                    <img src="${item.thumbnail}" alt=${item.title}>
+                    <img src="${item.thumbnail}" alt="${item.title}"/>
                     <div class="item_hover d-none">
                         <span class="item_hover_link">View Item</span>
                     </div>
@@ -59,7 +59,7 @@ const renderProducts = (products, productCounts, element1, element2) => {
                 </div>` : `<span class="product_price">£${(item.price).toFixed(2)}</span>`
             }
             </div>
-`;
+        `;
     
     const productItem = document.createElement("div");
     productItem.className = "product_item";
