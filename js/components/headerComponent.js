@@ -57,8 +57,8 @@ const renderHeaderComponent = () => {
         header.innerHTML = `
             <div class="header d-flex">
                 <div class="header_logo d-flex f-size-26-tablet">
-                    <h3 class="logo d-none d-block-tablet-up f-size-24"><a href="start.html">Template</a></h3>
-                    <h3 class="logo d-none-tablet-up f-size-24"><a href="start.html">TL</a></h3>
+                    <h3 class="logo d-none d-block-tablet-up f-size-24"><a href="index.html">Template</a></h3>
+                    <h3 class="logo d-none-tablet-up f-size-24"><a href="index.html">TL</a></h3>
                 </div>
                 <div class="header_shopArea d-flex align-items-center">
                     <a href="#" class="header_email d-none d-block-tablet-up">E-mail sing up</a>
