@@ -133,7 +133,6 @@ var addToBagHandler = function addToBagHandler(e) {
   sizeAndColorInfo.innerHTML = sizeAndColorInfoText;
   productItemSection.appendChild(sizeAndColorInfo);
   setTimeout(function () {
-    console.log(window.location);
     window.location.pathname = "/shopping-bag.html";
   }, 2000);
 };
