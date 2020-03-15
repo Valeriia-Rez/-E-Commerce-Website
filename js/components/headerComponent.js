@@ -8,6 +8,11 @@ const openSearch = () => {
     } else {
         headerNavBar.classList.add("expanded");
     }
+
+    document.addEventListener("click", function(event) {
+        if (event.target.closest(".header_navbar")) return;
+        headerNavBar.classList.remove("expanded");
+    })
 }
 
 const openMobileHandler = () => {
@@ -38,6 +43,13 @@ const closeMobileHandler = () => {
     }
 }
 
+const inputSearchTabletUpKeyPress = e => {
+    const windowWidth = window.innerWidth;
+    if (windowWidth >= 768 && windowWidth < 1025 && e.keyCode === 13) {
+        e.preventDefault();
+        window.location.pathname = "/catalog.html";
+    }
+}
 const renderHeaderComponent = () => {
         let header = document.querySelector("[data-selector='header']");
         const storage = new Storage();
@@ -95,7 +107,7 @@ const renderHeaderComponent = () => {
                     </nav>
                 <div class="menu_search">
                     <div class="search_wrapper">
-                        <input type="search" class="search_field d-none" data-selector="search_field" placeholder="Style Name">
+                        <input type="search" onkeyPress="inputSearchTabletUpKeyPress(event)" class="search_field d-none" data-selector="search_field" placeholder="Style Name">
                         <img src="img/ico.jpg" alt="search_icon" class="search_icon" onclick="openSearch()" data-selector="search_icon"/>
                     </div>
                 </div>

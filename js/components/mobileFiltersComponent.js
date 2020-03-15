@@ -1,5 +1,11 @@
 const renderMobileFiltersComponent = () => {
+
     let mobileFilters = document.querySelector("[data-selector='mobile_filters']");
+    const windowWidth = window.innerWidth;
+    if (windowWidth > 1025) {
+        mobileFilters.innerHTML = ""
+        return
+    }
     mobileFilters.innerHTML = `
         <ul class="mobile_filters_list d-flex flex-wrap py-4">
         <li class="filter ">
@@ -73,3 +79,4 @@ const renderMobileFiltersComponent = () => {
 };
 
 window.addEventListener("DOMContentLoaded", renderMobileFiltersComponent);
+window.addEventListener("resize", renderMobileFiltersComponent);

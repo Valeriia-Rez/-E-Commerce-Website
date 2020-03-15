@@ -100,7 +100,20 @@ const addToBagHandler = (e) => {
 
     storage.storeToShoppingCart(addToShoppingBagProduct);
     renderHeaderComponent();
-    window.location.pathname = "/shopping-bag.html";
+
+    const sizeAndColorInfoText = `<p>Item with selected size: <strong>${size}</strong>
+     and color:<strong>${color}</strong>
+    has been added to shopping bag
+    </p>`;
+    const productItemSection = document.querySelector(".product_item_section");
+    const sizeAndColorInfo = document.createElement("div");
+    sizeAndColorInfo.className = "size_and_color_info";
+    sizeAndColorInfo.innerHTML = sizeAndColorInfoText;
+    productItemSection.appendChild(sizeAndColorInfo);
+
+    setTimeout(function() {
+        window.location.pathname = "/shopping-bag.html";
+    }, 2000)
 }
 
 const renderProductItem = () => {
