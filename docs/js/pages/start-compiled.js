@@ -31,7 +31,8 @@ var addToBagBestOffer = function addToBagBestOffer(e) {
     storage.storeToShoppingCart(addToShoppingBagProduct);
   });
   renderHeaderComponent();
-  window.location.pathname = "/shopping-bag.html";
+  var shoppingBagUrl = window.location.pathname.replace("index.html", "shopping-bag.html");
+  window.location.pathname = shoppingBagUrl;
 };
 
 var renderBestOfferItems = function renderBestOfferItems() {

@@ -112,8 +112,8 @@ const addToBagHandler = (e) => {
     productItemSection.appendChild(sizeAndColorInfo);
 
     setTimeout(function() {
-
-        window.location.pathname = "/shopping-bag.html";
+        const shoppingBagUrl = window.location.pathname.replace("item.html", "shopping-bag.html");
+        window.location.pathname = shoppingBagUrl;
     }, 2000)
 }
 

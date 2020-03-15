@@ -24,7 +24,8 @@ const addToBagBestOffer = e => {
         storage.storeToShoppingCart(addToShoppingBagProduct);
     });
     renderHeaderComponent();
-    window.location.pathname = "/shopping-bag.html";
+    const shoppingBagUrl = window.location.pathname.replace("index.html", "shopping-bag.html");
+    window.location.pathname = shoppingBagUrl;
 };
 
 const renderBestOfferItems = () => {
