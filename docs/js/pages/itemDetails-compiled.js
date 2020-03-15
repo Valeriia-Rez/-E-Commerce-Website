@@ -126,7 +126,15 @@ var addToBagHandler = function addToBagHandler(e) {
 
   storage.storeToShoppingCart(addToShoppingBagProduct);
   renderHeaderComponent();
-  window.location.pathname = "/shopping-bag.html";
+  var sizeAndColorInfoText = "<p>Item with selected size: <strong>".concat(size, "</strong>\n     and color:<strong>").concat(color, "</strong>\n    has been added to shopping bag\n    </p>");
+  var productItemSection = document.querySelector(".product_item_section");
+  var sizeAndColorInfo = document.createElement("div");
+  sizeAndColorInfo.className = "size_and_color_info";
+  sizeAndColorInfo.innerHTML = sizeAndColorInfoText;
+  productItemSection.appendChild(sizeAndColorInfo);
+  setTimeout(function () {
+    window.location.pathname = "/shopping-bag.html";
+  }, 2000);
 };
 
 var renderProductItem = function renderProductItem() {
